@@ -18,6 +18,8 @@ public class PlayerPickUp : MonoBehaviour
 
     [SerializeField] private LayerMask pickUpLayerMask;
 
+    public float grabDistance = 3f;
+
     private ObjectGrabbable objectGrabbable;
 
     void Update()
@@ -28,7 +30,7 @@ public class PlayerPickUp : MonoBehaviour
             {
                 // Not carrying an object, try to grab
 
-                float pickUpDistance = 2f;
+                float pickUpDistance = grabDistance;
                 if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit raycastHit, pickUpDistance, pickUpLayerMask))
                 {
                     if (raycastHit.transform.TryGetComponent(out objectGrabbable))
