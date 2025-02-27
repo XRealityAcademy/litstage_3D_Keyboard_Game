@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Got from youtube video!!!
-
 public class PlayerPickUp : MonoBehaviour
 {
     [SerializeField] private Transform playerCameraTransform;
