@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edc772e91a737449eb7262b46d462664, type: 3}
+  m_Name: NPC_Ismael_Dialog
+  m_EditorClassIdentifier: 
+  dialogLines:
+  - text: Call me Ishmael. Some years ago;never mind how long precisely
+    voiceClip: {fileID: 8300000, guid: fd08dcaa325f447c088f2988ffdf6fff, type: 3}
+  - text: having little or no money in my purse, and nothing particular to interest
+      me on shore,
+    voiceClip: {fileID: 8300000, guid: 44e2e1ed3895c4a2ca33bece12979fb5, type: 3}
+  - text: I thought I would sail about a little and see the watery part of the world.
+    voiceClip: {fileID: 8300000, guid: 6720c63d9790847ef9485491981ee3ff, type: 3}
