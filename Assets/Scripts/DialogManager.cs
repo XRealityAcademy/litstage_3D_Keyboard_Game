@@ -9,7 +9,7 @@ public class DialogManager : MonoBehaviour
     public float typingSpeed = 0.05f;
 
     private Coroutine typingCoroutine;
-    public bool IsTyping { get; private set; } = false; // ✅ Track whether typing is active
+    public bool IsTyping { get; private set; } = false; // Track whether typing is active
     private string currentMessage = "";
 
     void Start()
