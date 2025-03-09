@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 294983505}
   - component: {fileID: 294983504}
   m_Layer: 0
-  m_Name: platform
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1616,11 +1616,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca984b3108db4c4c8212cc0f3e2c899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetX: 0
-  offsetY: 3
-  offsetZ: 10
   player: {fileID: 1270102012}
   offset: {x: 0, y: 3, z: -5}
+  adjustmentSpeed: 0.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
