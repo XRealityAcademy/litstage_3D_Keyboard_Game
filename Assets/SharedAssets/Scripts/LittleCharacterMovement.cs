@@ -133,15 +133,15 @@ public class LittleCharacterMovement : MonoBehaviour
                 result.gameObject.CompareTag("NPC_Text") ||
                 result.gameObject.CompareTag("NPC_CloseButton")) && Input.GetMouseButtonDown(0))
             {
-                Debug.Log("🖱️ Clicked on: " + result.gameObject.name);
-                Debug.Log("🟡 Clicked on UI Element (NPC) - Ignoring movement!");
+                //Debug.Log("🖱️ Clicked on: " + result.gameObject.name);
+                //Debug.Log("🟡 Clicked on UI Element (NPC) - Ignoring movement!");
 
                 // 🛠️ Try to find DialogInteraction in the parent
                 DialogInteraction dialogInteraction = result.gameObject.GetComponentInParent<DialogInteraction>();
 
                 if (dialogInteraction != null)
                 {
-                    Debug.Log("✅ DialogInteraction found on: " + dialogInteraction.gameObject.name);
+                  //  Debug.Log("✅ DialogInteraction found on: " + dialogInteraction.gameObject.name);
                     dialogInteraction.OnNPCIconClick();
                 }
                 else
