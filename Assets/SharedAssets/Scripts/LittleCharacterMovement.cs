@@ -31,7 +31,6 @@ public class LittleCharacterMovement : MonoBehaviour
         // **🛠️ Step 1: Check if clicking on UI elements (buttons, icons, etc.)**
         if (IsPointerOverUIElement())
         {
-           // Debug.Log("🟡 Clicked on UI Element - Ignoring movement!");
             return; // ✅ Prevent movement if clicking UI
         }
 
@@ -40,13 +39,35 @@ public class LittleCharacterMovement : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            //Debug.Log($"🖱️ Clicked on: {hit.collider.gameObject.name}");
-
-            // **🛠️ If clicking an NPC speech bubble or icon, prevent movement**
-            if (hit.collider.CompareTag("NPC_SpeechBubble") || hit.collider.CompareTag("NPC_ClickableIcon"))
+            // ✅ Log the Raycast hit ONLY when clicking
+            if (Input.GetMouseButtonDown(0))
             {
-                //Debug.Log("🟡 Clicked on NPC UI - Ignoring movement!");
-                return; // ✅ Prevent movement if clicking on UI
+             //   Debug.Log($"🖱️ Clicked on: {hit.collider.gameObject.name} (Layer: {LayerMask.LayerToName(hit.collider.gameObject.layer)})");
+            }
+
+            // ✅ **Detect SpaceElements only when clicking**
+            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("SpaceElements") && Input.GetMouseButtonDown(0))
+            {
+                //Debug.Log("🟡 Clicked on a SpaceElement: " + hit.collider.gameObject.name);
+
+                // ✅ Show RedCircle at the clicked position
+                redCircle.transform.position = hit.point;
+                redCircle.SetActive(true);
+                greenCircle.SetActive(false);
+
+                // ✅ Try to display the message if this object has a SpaceElement component
+                SpaceElement spaceElement = hit.collider.GetComponent<SpaceElement>();
+                if (spaceElement != null)
+                {
+                    spaceElement.DisplayMessage();
+                }
+                else
+                {
+                    Debug.LogError("❌ SpaceElement NOT found on: " + hit.collider.gameObject.name);
+                    Debug.Log($"🔍 Checking Parent: {hit.collider.transform.parent?.gameObject.name}");
+                }
+
+                return; // ✅ Prevent NPC movement
             }
 
             // **🛠️ Update indicator positions (Restore Pointer)**
@@ -67,17 +88,15 @@ public class LittleCharacterMovement : MonoBehaviour
             // **🛠️ Step 4: Check if it's a walkable area**
             if (hit.collider.CompareTag("Ground"))
             {
-                //Debug.Log("✅ Clicked on GROUND at: " + hit.point);
-
                 greenCircle.SetActive(true);
                 redCircle.SetActive(false);
 
                 if (Input.GetMouseButtonDown(0)) // ✅ If left-clicked, move NPC
                 {
-                    //Debug.Log("🟢 Moving NPC_LittleCharacter to: " + hit.point);
                     agent.SetDestination(hit.point);
                     yellowCircle.transform.position = hit.point;
                     yellowCircle.SetActive(true);
+                    isTraveling = true; // ✅ Movement is properly handled
                 }
             }
             else
@@ -116,7 +135,7 @@ public class LittleCharacterMovement : MonoBehaviour
 
         foreach (RaycastResult result in results)
         {
-            Debug.Log($"🖱️ UI Raycast Hit: {result.gameObject.name}");
+           // Debug.Log($"🖱️ UI Raycast Hit: {result.gameObject.name}");
         }
 
         // ✅ Ignore NPC_Model colliders and prioritize UI elements
@@ -124,8 +143,7 @@ public class LittleCharacterMovement : MonoBehaviour
         {
             if (result.gameObject.CompareTag("NPC_ClickableIcon") || result.gameObject.CompareTag("NPC_Text"))
             {
-                Debug.Log("🟡 Clicked on UI Element (NPC) - Ignoring movement!");
-                //return true; // ❌ Prevent movement
+               // Debug.Log("🟡 Clicked on UI Element (NPC) - Ignoring movement!");
             }
         }
 
