@@ -9,6 +9,7 @@ TagManager:
   - NPC_ClickableIcon
   - NPC_Text
   - NPC_SpeechBubble
+  - NPC_CloseButton
   layers:
   - Default
   - TransparentFX
