@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 47744401}
   - component: {fileID: 47744400}
   m_Layer: 5
-  m_Name: CloseButton
+  m_Name: DialogCloseButton
   m_TagString: NPC_CloseButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -881,11 +881,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcSpeechBubble: {fileID: 874884031}
   npcText: {fileID: 494759601}
-  npcClickableIcon: {fileID: 1981702569}
-  npcDialogButton: {fileID: 47744400}
+  dialogTriggerButton: {fileID: 1981702569}
+  dialogCloseButton: {fileID: 47744400}
   npcNameplate: {fileID: 167696410}
-  npcName: Laine
-  npcDialogText: Hello, traveler! Welcome to my shop.
   npcData: {fileID: 11400000, guid: 8ce0e033b9c674b878eec7a8f9d70661, type: 2}
 --- !u!1 &421948578
 GameObject:
@@ -1824,7 +1822,7 @@ GameObject:
   - component: {fileID: 1981702570}
   - component: {fileID: 1981702569}
   m_Layer: 5
-  m_Name: DialogBotton
+  m_Name: DialogTriggerButton
   m_TagString: NPC_ClickableIcon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1838,8 +1836,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981702567}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 808216282}
