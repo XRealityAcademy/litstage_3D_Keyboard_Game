@@ -40,18 +40,27 @@ public class MovementControls : MonoBehaviour
 
     void Update()
     {
+        // Check if the player is interacting with UI
+        if (IsPointerOverUI())
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
 
         #region Handles Movment
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
 
-        // Press Left Shift to run
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
         float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical") : 0;
         float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
-
         #endregion
 
         #region Handles gravity
@@ -61,7 +70,6 @@ public class MovementControls : MonoBehaviour
         {
             moveDirection.y -= gravity * Time.deltaTime;
         }
-
         #endregion
 
         #region Handles Rotation
@@ -74,7 +82,12 @@ public class MovementControls : MonoBehaviour
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
-
         #endregion
+    }
+
+    // Check if mouse is over a UI element
+    private bool IsPointerOverUI()
+    {
+        return UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject();
     }
 }
