@@ -22,6 +22,11 @@ public class DialogInteraction : MonoBehaviour
     public NPCDialogData npcData; // 📜 ScriptableObject for Dialog
     private int currentLineIndex = 0; // 📌 Track current dialog position
 
+    [Header("Audio Manager")]
+    private DialogAudioManager audioManager; // ✅ Use external audio manager
+    private DialogTextAnimator textAnimator; // ✅ New Text Animator
+
+
 
     void Start()
     {
@@ -44,6 +49,21 @@ public class DialogInteraction : MonoBehaviour
         {
             npcNameplate.text = npcData.npcName; // Set NPC Name
         }
+
+
+        // ✅ Get or Add the DialogAudioManager component
+        audioManager = GetComponent<DialogAudioManager>();
+        if (audioManager == null)
+        {
+            audioManager = gameObject.AddComponent<DialogAudioManager>();
+        }
+
+        // ✅ Get or Add the DialogTextAnimator component
+        textAnimator = GetComponent<DialogTextAnimator>();
+        if (textAnimator == null)
+        {
+            textAnimator = gameObject.AddComponent<DialogTextAnimator>();
+        }
     }
 
     public void OnNPCIconClick()
@@ -63,34 +83,28 @@ public class DialogInteraction : MonoBehaviour
                 return;
             }
 
-            // **Show the current dialog line**
-            npcText.text = npcData.dialogLines[currentLineIndex].text;
+            // **Show the current dialog line and sound **
+            audioManager.PlayVoiceClip(npcData.dialogLines[currentLineIndex].voiceClip);
+            textAnimator.AnimateText(npcText, npcData.dialogLines[currentLineIndex].text, 0.05f);
 
-            // **Check if NEXT click will close dialog**
-            if (currentLineIndex == npcData.dialogLines.Length - 1)
-            {
-                npcDialogButton.GetComponentInChildren<TextMeshProUGUI>().text = "Close"; // Change button text
-            }
-            else
-            {
-                npcDialogButton.GetComponentInChildren<TextMeshProUGUI>().text = "Next"; // Keep button text as "Next"
-            }
+
 
             currentLineIndex++; // ✅ Move to the next line
         }
         else
         {
-            npcText.text = npcDialogText; // Fallback text
+            textAnimator.AnimateText(npcText, npcDialogText, 0.05f); // Default text
+
         }
 
-        npcDialogButton.gameObject.SetActive(true); // Show close button
     }
 
     // **Closes the dialog when clicking after the last line**
     public void CloseDialog()
     {
         npcSpeechBubble.SetActive(false);
-        npcDialogButton.gameObject.SetActive(false); // Hide close button
         currentLineIndex = 0; // ✅ Reset for the next interaction
+        // 🎵 **Stop any playing audio**
+        audioManager.StopVoice();
     }
 }
