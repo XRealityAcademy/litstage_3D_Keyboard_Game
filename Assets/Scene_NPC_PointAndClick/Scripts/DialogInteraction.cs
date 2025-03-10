@@ -27,6 +27,11 @@ public class DialogInteraction : MonoBehaviour
     private DialogTextAnimator textAnimator; // ✅ New Text Animator
 
 
+    private Vector3 bigButtonSize = new Vector3(3f, 3f, 3f); // Large button size
+    private Vector3 normalButtonSize; // Normal dialog button size
+    private float animationDuration = 0.2f; // Animation duration
+    private Coroutine jumpRoutine;
+
 
     void Start()
     {
@@ -37,6 +42,9 @@ public class DialogInteraction : MonoBehaviour
             Debug.LogError("⚠️ NPCInteraction: Missing UI elements in Inspector!");
             return;
         }
+
+        normalButtonSize = npcClickableIcon.transform.localScale; // Save original button size
+
 
         // **Initialize UI**
         npcSpeechBubble.SetActive(false); // Hide dialog at start
@@ -64,10 +72,20 @@ public class DialogInteraction : MonoBehaviour
         {
             textAnimator = gameObject.AddComponent<DialogTextAnimator>();
         }
+
+        jumpRoutine = StartCoroutine(BounceDialogButton());
+
     }
 
     public void OnNPCIconClick()
     {
+
+        if (jumpRoutine != null)
+        {
+            StopCoroutine(jumpRoutine); // Stop the bouncing effect
+            jumpRoutine = null;
+        }
+
         // If the speech bubble is inactive, activate it
         if (!npcSpeechBubble.activeSelf)
         {
@@ -112,7 +130,9 @@ public class DialogInteraction : MonoBehaviour
         audioManager.StopVoice();
 
         // Reset button size for next interaction
-        npcClickableIcon.transform.localScale = new Vector3(3f, 3f, 3f);
+        StartCoroutine(ResetDialogButton()); // 🛠️ Restore button smoothly
+        jumpRoutine = StartCoroutine(BounceDialogButton());
+
     }
 
     private IEnumerator AnimatePopup()
@@ -136,18 +156,63 @@ public class DialogInteraction : MonoBehaviour
 
     private IEnumerator ShrinkDialogButton()
     {
-        float duration = 0.2f; // Animation time
         float time = 0;
-        Vector3 startScale = npcClickableIcon.transform.localScale; // Start with the big size
-        Vector3 endScale = Vector3.one; // Normal size (1,1,1)
+        Vector3 startScale = npcClickableIcon.transform.localScale;
+        Vector3 endScale = Vector3.one; // Normal button size (1,1,1)
 
-        while (time < duration)
+        while (time < animationDuration)
         {
-            npcClickableIcon.transform.localScale = Vector3.Lerp(startScale, endScale, time / duration);
+            npcClickableIcon.transform.localScale = Vector3.Lerp(startScale, endScale, time / animationDuration);
             time += Time.deltaTime;
             yield return null;
         }
 
         npcClickableIcon.transform.localScale = endScale; // Ensure final size is exact
+    }
+
+    private IEnumerator ResetDialogButton()
+    {
+        float time = 0;
+        Vector3 startScale = npcClickableIcon.transform.localScale;
+        Vector3 endScale = bigButtonSize; // Restore to big size (3,3,3)
+
+        while (time < animationDuration)
+        {
+            npcClickableIcon.transform.localScale = Vector3.Lerp(startScale, endScale, time / animationDuration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        npcClickableIcon.transform.localScale = endScale; // Ensure final size is exact
+    }
+
+    private IEnumerator BounceDialogButton()
+    {
+        while (true) // Keep bouncing until stopped
+        {
+            yield return new WaitForSeconds(1.5f); // Delay between bounces
+
+            float duration = 0.3f; // Jump duration
+            float time = 0;
+            Vector3 startPos = npcClickableIcon.transform.localPosition;
+            Vector3 endPos = startPos + new Vector3(0, 25f, 0); // Jump up by 10 units
+
+            // Jump up animation
+            while (time < duration)
+            {
+                npcClickableIcon.transform.localPosition = Vector3.Lerp(startPos, endPos, time / duration);
+                time += Time.deltaTime;
+                yield return null;
+            }
+
+            time = 0;
+            // Jump down animation
+            while (time < duration)
+            {
+                npcClickableIcon.transform.localPosition = Vector3.Lerp(endPos, startPos, time / duration);
+                time += Time.deltaTime;
+                yield return null;
+            }
+        }
     }
 }
