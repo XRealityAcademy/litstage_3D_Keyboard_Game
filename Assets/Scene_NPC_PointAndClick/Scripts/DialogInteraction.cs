@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro; // ✅ Using TextMeshPro for UI Text
 using UnityEngine.UI;
-
+using System.Collections;
 
 public class DialogInteraction : MonoBehaviour
 {
@@ -39,7 +39,7 @@ public class DialogInteraction : MonoBehaviour
         }
 
         // **Initialize UI**
-        npcSpeechBubble.SetActive(true); // Hide dialog at start
+        npcSpeechBubble.SetActive(false); // Hide dialog at start
         npcDialogButton.gameObject.SetActive(false);
         npcClickableIcon.onClick.AddListener(OnNPCIconClick); // Assign click event
         npcDialogButton.onClick.AddListener(CloseDialog); // Assign close button event
@@ -71,7 +71,11 @@ public class DialogInteraction : MonoBehaviour
         // If the speech bubble is inactive, activate it
         if (!npcSpeechBubble.activeSelf)
         {
-            npcSpeechBubble.SetActive(true);
+            // Shrink the button on first click
+            StartCoroutine(ShrinkDialogButton());
+            //npcSpeechBubble.SetActive(true);
+            StartCoroutine(AnimatePopup()); // ✅ Smooth pop-up animation
+
         }
 
         if (npcData != null && npcData.dialogLines.Length > 0)
@@ -106,5 +110,44 @@ public class DialogInteraction : MonoBehaviour
         currentLineIndex = 0; // ✅ Reset for the next interaction
         // 🎵 **Stop any playing audio**
         audioManager.StopVoice();
+
+        // Reset button size for next interaction
+        npcClickableIcon.transform.localScale = new Vector3(3f, 3f, 3f);
+    }
+
+    private IEnumerator AnimatePopup()
+    {
+        npcSpeechBubble.transform.localScale = Vector3.zero; // Start small
+        npcSpeechBubble.SetActive(true);
+
+        float duration = 0.3f;
+        float time = 0;
+
+        while (time < duration)
+        {
+            float scale = Mathf.Lerp(0, 1, time / duration);
+            npcSpeechBubble.transform.localScale = new Vector3(scale, scale, scale);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        npcSpeechBubble.transform.localScale = Vector3.one; // Ensure final scale is 1
+    }
+
+    private IEnumerator ShrinkDialogButton()
+    {
+        float duration = 0.2f; // Animation time
+        float time = 0;
+        Vector3 startScale = npcClickableIcon.transform.localScale; // Start with the big size
+        Vector3 endScale = Vector3.one; // Normal size (1,1,1)
+
+        while (time < duration)
+        {
+            npcClickableIcon.transform.localScale = Vector3.Lerp(startScale, endScale, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        npcClickableIcon.transform.localScale = endScale; // Ensure final size is exact
     }
 }
