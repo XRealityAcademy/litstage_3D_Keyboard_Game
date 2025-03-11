@@ -11,6 +11,15 @@ public class DialogInteraction : MonoBehaviour
     public Button dialogTriggerButton;      // Dialog Button (Opens dialog)
     public Button dialogCloseButton;       // Close Button (Closes dialog)
     public TextMeshProUGUI npcNameplate; // Displays NPC name in the dialog
+    public Transform floatingDialog;     // FloatingDialog canvas reference
+
+    [Header("Position Settings")]
+    public float offsetX = 6f; // Moves the dialog to the right when clicking
+    private Vector3 originalDialogPosition; // Stores the initial position of the dialog
+    private bool hasMoved = false; // ✅ Ensures the dialog moves only once
+
+
+
 
     [Header("NPC Data")]
     public NPCDialogData npcData; // 📜 ScriptableObject for Dialog
@@ -38,7 +47,10 @@ public class DialogInteraction : MonoBehaviour
         }
 
         bigButtonSize = dialogTriggerButton.transform.localScale;// Save original button size
-        
+        originalDialogPosition = floatingDialog.position; // Store initial position
+
+
+
 
         // **Initialize UI**
         npcSpeechBubble.SetActive(false); // Hide dialog at start
@@ -74,6 +86,15 @@ public class DialogInteraction : MonoBehaviour
 
     public void OnNPCIconClick()
     {
+
+
+        // ✅ **Move only ONCE**
+        if (!hasMoved)
+        {
+            floatingDialog.position = originalDialogPosition + new Vector3(offsetX, 0, 0);
+            hasMoved = true; // Prevents repeated movement
+            Debug.Log($"📍 Dialog moved once to: {floatingDialog.position}");
+        }
 
         if (jumpRoutine != null)
         {
@@ -132,10 +153,16 @@ public class DialogInteraction : MonoBehaviour
         // **Stop any playing audio**
         audioManager.StopVoice();
 
+        // **Reset FloatingDialog position**
+        floatingDialog.position = originalDialogPosition;
+        Debug.Log($"🔄 Dialog reset to: {floatingDialog.position}");
+
 
 
         jumpRoutine = StartCoroutine(BounceDialogButton());
         StartCoroutine(ResetDialogButton()); // 🛠️ Restore button smoothly
+        
+        hasMoved = false;
 
     }
 

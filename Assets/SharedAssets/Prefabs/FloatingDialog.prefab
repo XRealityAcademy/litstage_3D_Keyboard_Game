@@ -102,7 +102,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &7496399581211173980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,7 +120,9 @@ MonoBehaviour:
   dialogTriggerButton: {fileID: 3522129249221268971}
   dialogCloseButton: {fileID: 457317592332439405}
   npcNameplate: {fileID: 6810348375985698033}
-  npcData: {fileID: 11400000, guid: 8ce0e033b9c674b878eec7a8f9d70661, type: 2}
+  floatingDialog: {fileID: 4487934501308449735}
+  offsetX: 10
+  npcData: {fileID: 11400000, guid: cd4223d5e65fc482f83d53d3e9c56447, type: 2}
 --- !u!1 &1600103274100662870
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,8 +315,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: f629c6e43dba4bf38cb74d8860150664, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -480,7 +482,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -975,7 +977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 714a848ab2a5545f897f1cd0a7b9b0c9, type: 2}
   m_Color: {r: 0.76862746, g: 0.76862746, b: 0.76862746, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}

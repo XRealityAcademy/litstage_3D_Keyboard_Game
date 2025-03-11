@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8b7c6bd4282480c970b4ece7b43438, type: 3}
+  m_Name: DefaultDialog
+  m_EditorClassIdentifier: 
+  npcName: Denis
+  dialogLines:
+  - text: 'This is the default message and audio.
+
+      Please create a new Dialog
+      inside the folder SharedAssets -> ScriptableObjects.
+
+      Right-click and
+      select Create -> Dialog -> NPCDialog'
+    voiceClip: {fileID: 8300000, guid: 6998c720d3b814f1683707e0dba0e095, type: 3}
+  - text: Specify the number of lines in your dialog. Add the name of your NPC character,
+      the dialog lines, and the corresponding audio.
+    voiceClip: {fileID: 8300000, guid: 90a34e3f0ac714ae5a162aacc166051d, type: 3}
+  - text: Finally, click on your FloatingDialog component and replace the Npc Data
+      input with your new dialog.
+    voiceClip: {fileID: 8300000, guid: 9d7b9caba003848e192b9b3daac93081, type: 3}
