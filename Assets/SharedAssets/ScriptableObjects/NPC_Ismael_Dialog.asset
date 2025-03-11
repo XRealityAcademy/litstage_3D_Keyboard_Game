@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc772e91a737449eb7262b46d462664, type: 3}
+  m_Script: {fileID: 11500000, guid: cd8b7c6bd4282480c970b4ece7b43438, type: 3}
   m_Name: NPC_Ismael_Dialog
   m_EditorClassIdentifier: 
+  npcName: Ismael
   dialogLines:
   - text: Call me Ishmael. Some years ago;never mind how long precisely
     voiceClip: {fileID: 8300000, guid: fd08dcaa325f447c088f2988ffdf6fff, type: 3}

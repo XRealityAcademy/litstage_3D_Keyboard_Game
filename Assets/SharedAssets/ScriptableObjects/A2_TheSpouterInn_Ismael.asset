@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8b7c6bd4282480c970b4ece7b43438, type: 3}
+  m_Name: A2_TheSpouterInn_Ismael
+  m_EditorClassIdentifier: 
+  npcName: Ismael
+  dialogLines:
+  - text: "It was a queer sort of place\u2014a gable-ended old house,"
+    voiceClip: {fileID: 8300000, guid: 7a4e4dcb8e6c34ed69f0a54de6195047, type: 3}
+  - text: one side palsied as it were, and leaning over sadly.
+    voiceClip: {fileID: 8300000, guid: 1ae8322e1003f4cdcaaeaa2d4e07f4d5, type: 3}
+  - text: It stood on a sharp bleak corner, where that tempestuous wind Euroclydon
+    voiceClip: {fileID: 8300000, guid: 6fee672e2f04643c18774c1eb5a4a35f, type: 3}
+  - text: "kept up a worse howling than ever it did about poor Paul\u2019s tossed
+      craft."
+    voiceClip: {fileID: 8300000, guid: 067a8e1530929457ba07cb6c522b45f2, type: 3}
