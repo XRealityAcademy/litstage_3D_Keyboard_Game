@@ -63,8 +63,8 @@ public class LittleCharacterMovement : MonoBehaviour
                 return; // ✅ Prevent movement
             }
 
-            // ✅ **Step 4: Handle Walkable Area (Ground)**
-            if (hit.collider.CompareTag("Ground"))
+            // ✅ **Step 4: Handle Walkable Area (Ground & TriggerZone)**
+            if (hit.collider.CompareTag("Ground") || hit.collider.CompareTag("TriggerZone"))
             {
                 greenCircle.transform.position = hit.point;
                 greenCircle.SetActive(true);
@@ -141,7 +141,6 @@ public class LittleCharacterMovement : MonoBehaviour
 
                 if (dialogInteraction != null)
                 {
-                  //  Debug.Log("✅ DialogInteraction found on: " + dialogInteraction.gameObject.name);
                     dialogInteraction.OnNPCIconClick();
                 }
                 else

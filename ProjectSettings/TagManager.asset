@@ -11,6 +11,7 @@ TagManager:
   - NPC_SpeechBubble
   - NPC_CloseButton
   - DialogTriggerZone
+  - TriggerZone
   layers:
   - Default
   - TransparentFX
