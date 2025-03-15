@@ -12,6 +12,7 @@ TagManager:
   - NPC_CloseButton
   - DialogTriggerZone
   - TriggerZone
+  - playerDialog
   layers:
   - Default
   - TransparentFX

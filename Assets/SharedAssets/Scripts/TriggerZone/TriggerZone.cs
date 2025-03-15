@@ -14,6 +14,7 @@ public class TriggerZone : MonoBehaviour
 
     private void Start()
     {
+       // Debug.Log("starting triggerZone");
         // ✅ Attach AudioSource dynamically
         audioSource = gameObject.AddComponent<AudioSource>();
         if (triggerSound != null)
@@ -51,8 +52,16 @@ public class TriggerZone : MonoBehaviour
         {
             HideTriggerZone(); // ✅ Hide effects & disable collider
 
-            // ✅ Schedule full deactivation **ONLY** when `triggerOnlyOnce` is enabled
-            Invoke(nameof(DisableTriggerZone), triggerSound.length);
+            if (triggerSound != null)
+            {
+                // ✅ Schedule full deactivation **ONLY** when `triggerOnlyOnce` is enabled
+                Invoke(nameof(DisableTriggerZone), triggerSound.length);
+            }
+            else {
+                DisableTriggerZone();
+            }
+
+
         }
     }
 

@@ -3,56 +3,46 @@ using UnityEngine;
 public class TriggerZoneDialog : MonoBehaviour
 {
     [Header("References")]
-    public GameObject player;  // The player GameObject
-    public GameObject dialogUI; // The dialog UI to attach
+    public DialogContainer dialogContainer; // ✅ Reference to the dialog container
 
     [Header("Settings")]
-    public bool triggerOnlyOnce = true; // Whether the event should happen once
-    private bool hasTriggered = false; // Prevent re-triggering if enabled
-
-    private Transform dialogTransform;
-    private Transform playerTransform;
-
-    private void Start()
-    {
-        if (dialogUI != null)
-        {
-            dialogUI.SetActive(false); // Hide dialog initially
-            dialogTransform = dialogUI.transform;
-        }
-
-        if (player != null)
-        {
-            playerTransform = player.transform;
-        }
-    }
+    public bool triggerOnlyOnce = true;
+    private bool hasTriggered = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player && !hasTriggered)
-        {
-            hasTriggered = true; // Mark as triggered if one-time event
+        if (!other.CompareTag("Player") || (hasTriggered && triggerOnlyOnce)) return;
+        hasTriggered = true;
 
-            if (dialogUI != null && playerTransform != null)
+        if (dialogContainer != null)
+        {
+            Debug.Log("📌 Player entered trigger zone! Attempting to show dialog...");
+
+            // ✅ Activate the dialog
+            dialogContainer.SetVisible(true);
+
+            // ✅ Verify if it actually became visible
+            if (dialogContainer.IsVisible())
             {
-                AttachDialogToPlayer();
+                Debug.Log("✅ Dialog successfully displayed!");
+            }
+            else
+            {
+                Debug.LogError("❌ Dialog did not become visible! Something is wrong.");
             }
         }
-    }
-
-    private void AttachDialogToPlayer()
-    {
-        dialogUI.SetActive(true); // Show the dialog
-        dialogTransform.SetParent(playerTransform); // Make the dialog follow the player
-        dialogTransform.localPosition = new Vector3(0, 2.5f, 0); // Adjust position above player head
+        else
+        {
+            Debug.LogError("❌ dialogContainer reference is missing in TriggerZoneDialog!");
+        }
     }
 
     public void CloseDialog()
     {
-        if (dialogUI != null)
+        if (dialogContainer != null)
         {
-            dialogUI.SetActive(false);
-            dialogTransform.SetParent(null); // Detach from player
+            Debug.Log("🗑️ Closing dialog...");
+            dialogContainer.SetVisible(false);
         }
     }
 }
