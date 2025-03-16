@@ -8,167 +8,161 @@ public class DialogInteraction : MonoBehaviour
     [Header("UI Elements")]
     public GameObject npcSpeechBubble;   // Dialog Panel (for visibility toggle)
     public TextMeshProUGUI npcText;      // Dialog Text
-    public Button dialogTriggerButton;      // Dialog Button (Opens dialog)
-    public Button dialogCloseButton;       // Close Button (Closes dialog)
+    public Button dialogCloseButton;     // Close Button (Closes dialog)
     public TextMeshProUGUI npcNameplate; // Displays NPC name in the dialog
     public Transform floatingDialog;     // FloatingDialog canvas reference
 
+    [Header("Dialog Icons")]
+    public GameObject DialogTriggerButtonCenter;  // ✅ The icon above NPC's head
+    public GameObject DialogTriggerButtonCorner;  // ✅ The icon at the bottom-right of dialog
+
     [Header("Position Settings")]
-    public float offsetX = 6f; // Moves the dialog to the right when clicking
     private Vector3 originalDialogPosition; // Stores the initial position of the dialog
-    private bool hasMoved = false; // ✅ Ensures the dialog moves only once
-
-
-
+    private bool hasMoved = false;
 
     [Header("NPC Data")]
     public NPCDialogData npcData; // 📜 ScriptableObject for Dialog
-    private int currentLineIndex = 0; // 📌 Track current dialog position
+    private int currentLineIndex = 0;
 
     [Header("Audio Manager")]
     private DialogAudioManager audioManager; //  Use external audio manager
     private DialogTextAnimator textAnimator; // New Text Animator
 
-
-    private Vector3 bigButtonSize;// Normal dialog button size
+    private Vector3 bigButtonSize; // Normal dialog button size
     private float animationDuration = 0.2f; // Animation duration
     private Coroutine jumpRoutine;
     private Coroutine pulseRoutine;
 
-
     void Start()
     {
-
         // **Check if UI elements are assigned**
-        if (npcSpeechBubble == null || npcText == null || dialogTriggerButton == null || dialogCloseButton == null)
+        if (npcSpeechBubble == null || npcText == null || dialogCloseButton == null)
         {
             Debug.LogError("⚠️ NPCInteraction: Missing UI elements in Inspector!");
             return;
         }
 
-        bigButtonSize = dialogTriggerButton.transform.localScale;// Save original button size
         originalDialogPosition = floatingDialog.position; // Store initial position
-
-
-
 
         // **Initialize UI**
         npcSpeechBubble.SetActive(false); // Hide dialog at start
         dialogCloseButton.gameObject.SetActive(false);
-        dialogTriggerButton.onClick.AddListener(OnNPCIconClick); // Assign click event
-        dialogCloseButton.onClick.AddListener(CloseDialog); // Assign close button event
+
+        // **Ensure correct button visibility at start**
+        if (DialogTriggerButtonCenter != null) DialogTriggerButtonCenter.SetActive(true);
+        if (DialogTriggerButtonCorner != null) DialogTriggerButtonCorner.SetActive(false);
+
+        // **Ensure DialogTriggerButtonCorner stays in bottom-right corner**
+        // Ensure the button is initially hidden, but don't change its position
+        if (DialogTriggerButtonCorner != null)
+        {
+            DialogTriggerButtonCorner.SetActive(false);
+        }
+
 
         // **Load NPC Data if available**
-        if (npcData != null)
-        {
-            npcNameplate.text = npcData.npcName; // Set NPC Name
-        }
+        if (npcData != null) npcNameplate.text = npcData.npcName;
 
-
-        // Get or Add the DialogAudioManager component
-        audioManager = GetComponent<DialogAudioManager>();
-        if (audioManager == null)
-        {
-            audioManager = gameObject.AddComponent<DialogAudioManager>();
-        }
-
-        // Get or Add the DialogTextAnimator component
-        textAnimator = GetComponent<DialogTextAnimator>();
-        if (textAnimator == null)
-        {
-            textAnimator = gameObject.AddComponent<DialogTextAnimator>();
-        }
+        // **Get or Add Components**
+        audioManager = GetComponent<DialogAudioManager>() ?? gameObject.AddComponent<DialogAudioManager>();
+        textAnimator = GetComponent<DialogTextAnimator>() ?? gameObject.AddComponent<DialogTextAnimator>();
 
         jumpRoutine = StartCoroutine(BounceDialogButton());
         pulseRoutine = null;
-
     }
 
     public void OnNPCIconClick()
     {
-
-
-        // ✅ **Move only ONCE**
+        // ✅ Move only ONCE
         if (!hasMoved)
         {
-            floatingDialog.position = originalDialogPosition + new Vector3(offsetX, 0, 0);
-            hasMoved = true; // Prevents repeated movement
-            Debug.Log($"📍 Dialog moved once to: {floatingDialog.position}");
+            hasMoved = true;
         }
 
+        // ✅ Switch Button Visibility (Hide center, Show corner)
+        if (DialogTriggerButtonCenter != null) DialogTriggerButtonCenter.SetActive(false);
+        if (DialogTriggerButtonCorner != null) DialogTriggerButtonCorner.SetActive(true);
+
+        // ✅ Stop bouncing effect
         if (jumpRoutine != null)
         {
-            StopCoroutine(jumpRoutine); // Stop the bouncing effect
+            StopCoroutine(jumpRoutine);
             jumpRoutine = null;
         }
 
+        // ✅ Start pulsing effect
         if (pulseRoutine == null)
         {
-            pulseRoutine = StartCoroutine(PulseButtonEffect());            
+            pulseRoutine = StartCoroutine(PulseButtonEffect());
         }
 
-        // If the speech bubble is inactive, activate it
+        // ✅ If the speech bubble is inactive, activate it
         if (!npcSpeechBubble.activeSelf)
         {
-            // Shrink the button on first click
-            StartCoroutine(ShrinkDialogButton());
-            //npcSpeechBubble.SetActive(true);
             StartCoroutine(AnimatePopup()); // Smooth pop-up animation
-
         }
 
+        // ✅ Show the dialog text and play the sound
         if (npcData != null && npcData.dialogLines.Length > 0)
         {
-            // **Check if this is the LAST line**
-            if (currentLineIndex >= npcData.dialogLines.Length)
-            {
-                CloseDialog();  // If user clicks after the last line, close dialog
-                return;
-            }
-
-            // **Show the current dialog line and sound **
-            audioManager.PlayVoiceClip(npcData.dialogLines[currentLineIndex].voiceClip);
-            textAnimator.AnimateText(npcText, npcData.dialogLines[currentLineIndex].text, 0.05f);
-
-
-
-            currentLineIndex++; // Move to the next line
+            ShowNextDialogLine();
         }
-
     }
 
-    // **Closes the dialog when clicking after the last line**
+    private void ShowNextDialogLine()
+    {
+        if (currentLineIndex >= npcData.dialogLines.Length)
+        {
+            CloseDialog();
+            return;
+        }
+
+        // ✅ Show the current dialog line
+        npcText.text = npcData.dialogLines[currentLineIndex].text;
+
+        // ✅ Play the associated voice clip
+        if (audioManager != null && npcData.dialogLines[currentLineIndex].voiceClip != null)
+        {
+            audioManager.PlayVoiceClip(npcData.dialogLines[currentLineIndex].voiceClip);
+        }
+
+        currentLineIndex++;
+    }
+
     public void CloseDialog()
     {
-        
-        // **Stop pulsing effect if running**
+        // ✅ Hide the Dialog
+        npcSpeechBubble.SetActive(false);
+        dialogCloseButton.gameObject.SetActive(false);
+        currentLineIndex = 0;
+
+        // ✅ Stop any playing audio
+        if (audioManager != null)
+        {
+            audioManager.StopVoice();
+        }
+
+        // ✅ Stop pulsing effect
         if (pulseRoutine != null)
         {
             StopCoroutine(pulseRoutine);
             pulseRoutine = null;
         }
 
-        npcSpeechBubble.SetActive(false);
-        currentLineIndex = 0; // Reset for the next interaction
-        // **Stop any playing audio**
-        audioManager.StopVoice();
-
-        // **Reset FloatingDialog position**
+        // ✅ Reset FloatingDialog position
         floatingDialog.position = originalDialogPosition;
-        Debug.Log($"🔄 Dialog reset to: {floatingDialog.position}");
-
-
-
-        jumpRoutine = StartCoroutine(BounceDialogButton());
-        StartCoroutine(ResetDialogButton()); // 🛠️ Restore button smoothly
-        
         hasMoved = false;
 
+        // ✅ Switch Button Visibility Back (Show center, Hide corner)
+        if (DialogTriggerButtonCenter != null) DialogTriggerButtonCenter.SetActive(true);
+        if (DialogTriggerButtonCorner != null) DialogTriggerButtonCorner.SetActive(false);
+
+        jumpRoutine = StartCoroutine(BounceDialogButton());
     }
 
     private IEnumerator AnimatePopup()
     {
-        npcSpeechBubble.transform.localScale = Vector3.zero; // Start small
+        npcSpeechBubble.transform.localScale = Vector3.zero;
         npcSpeechBubble.SetActive(true);
 
         float duration = 0.3f;
@@ -182,71 +176,31 @@ public class DialogInteraction : MonoBehaviour
             yield return null;
         }
 
-        npcSpeechBubble.transform.localScale = Vector3.one; // Ensure final scale is 1
-    }
-
-    private IEnumerator ShrinkDialogButton()
-    {
-        float time = 0;
-        Vector3 startScale = dialogTriggerButton.transform.localScale;
-        Vector3 endScale = new Vector3(1.5f, 1.5f, 1.5f);
-
-        Vector3 fixedPosition = dialogTriggerButton.transform.position; // Lock current position
-
-        while (time < animationDuration)
-        {
-            dialogTriggerButton.transform.localScale = Vector3.Lerp(startScale, endScale, time / animationDuration);
-            dialogTriggerButton.transform.position = fixedPosition; // Keep it in place
-            time += Time.deltaTime;
-            yield return null;
-        }
-
-        dialogTriggerButton.transform.localScale = endScale;
-        dialogTriggerButton.transform.position = fixedPosition; // Ensure it stays in place
-
-        
-    }
-
-    private IEnumerator ResetDialogButton()
-    {
-        float time = 0;
-        Vector3 startScale = dialogTriggerButton.transform.localScale;
-        Vector3 endScale = bigButtonSize; // Restore to big size using the originalSize
-
-        while (time < animationDuration)
-        {
-            dialogTriggerButton.transform.localScale = Vector3.Lerp(startScale, endScale, time / animationDuration);
-            time += Time.deltaTime;
-            yield return null;
-        }
-
-        dialogTriggerButton.transform.localScale = endScale; // Ensure final size is exact
+        npcSpeechBubble.transform.localScale = Vector3.one;
     }
 
     private IEnumerator BounceDialogButton()
     {
-        while (true) // Keep bouncing until stopped
+        while (true)
         {
-            yield return new WaitForSeconds(1.5f); // Delay between bounces
+            yield return new WaitForSeconds(1.5f);
 
-            float duration = 0.3f; // Jump duration
+            float duration = 0.3f;
             float time = 0;
-            Vector3 startPos = dialogTriggerButton.transform.localPosition;
-            Vector3 endPos = startPos + new Vector3(0, 25f, 0); // Jump up by 10 units
+            Vector3 startPos = DialogTriggerButtonCenter.transform.localPosition;
+            Vector3 endPos = startPos + new Vector3(0, 25f, 0);
 
-            // Jump up animation
             while (time < duration)
             {
-                dialogTriggerButton.transform.localPosition = Vector3.Lerp(startPos, endPos, time / duration);
+                DialogTriggerButtonCenter.transform.localPosition = Vector3.Lerp(startPos, endPos, time / duration);
                 time += Time.deltaTime;
                 yield return null;
             }
 
             time = 0;
-            // Jump down animation
             while (time < duration)
             {
-                dialogTriggerButton.transform.localPosition = Vector3.Lerp(endPos, startPos, time / duration);
+                DialogTriggerButtonCenter.transform.localPosition = Vector3.Lerp(endPos, startPos, time / duration);
                 time += Time.deltaTime;
                 yield return null;
             }
@@ -255,36 +209,29 @@ public class DialogInteraction : MonoBehaviour
 
     private IEnumerator PulseButtonEffect()
     {
-        float pulseDuration = 0.5f; // Speed of pulse animation
-        float pulseSize = 2f; // Slightly bigger than normal (like a heart beat)
+        float pulseDuration = 0.5f;
+        float pulseSize = 2f;
 
-        while (true) // Keep looping until the user clicks
+        while (true)
         {
-            // Pulse Up
             yield return ScaleButton(pulseSize, pulseDuration);
-
-            // Pulse Down
             yield return ScaleButton(1f, pulseDuration);
         }
     }
 
-    // Helper function to smoothly scale the button
     private IEnumerator ScaleButton(float targetScale, float duration)
     {
         float time = 0;
-        Vector3 startScale = dialogTriggerButton.transform.localScale;
+        Vector3 startScale = DialogTriggerButtonCorner.transform.localScale;
         Vector3 endScale = new Vector3(targetScale, targetScale, targetScale);
-        Vector3 fixedPosition = dialogTriggerButton.transform.position; // Lock position
 
         while (time < duration)
         {
-            dialogTriggerButton.transform.localScale = Vector3.Lerp(startScale, endScale, time / duration);
-            dialogTriggerButton.transform.position = fixedPosition; // Keep in place
+            DialogTriggerButtonCorner.transform.localScale = Vector3.Lerp(startScale, endScale, time / duration);
             time += Time.deltaTime;
             yield return null;
         }
 
-        dialogTriggerButton.transform.localScale = endScale;
-        dialogTriggerButton.transform.position = fixedPosition;
+        DialogTriggerButtonCorner.transform.localScale = endScale; // ✅ Now only scales, doesn’t move!
     }
 }
