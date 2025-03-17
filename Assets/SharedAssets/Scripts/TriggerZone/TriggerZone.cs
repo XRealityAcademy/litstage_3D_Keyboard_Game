@@ -44,6 +44,7 @@ public class TriggerZone : MonoBehaviour
         // ✅ Play sound BEFORE hiding visuals
         if (triggerSound != null)
         {
+            Debug.Log("Playing sound");
             audioSource.Play();
         }
 
@@ -67,7 +68,6 @@ public class TriggerZone : MonoBehaviour
 
     private void HideTriggerZone()
     {
-        Debug.Log("🔻 Hiding Trigger Zone visuals immediately!");
         GetComponent<Collider>().enabled = false; // Disable trigger detection
 
         // ❌ **Don't touch the triggerRenderer (Keep Invisible)**
@@ -79,7 +79,7 @@ public class TriggerZone : MonoBehaviour
 
     private void DisableTriggerZone()
     {
-        Debug.Log("🚫 Disabling Trigger Zone after sound finishes.");
+//        Debug.Log("🚫 Disabling Trigger Zone after sound finishes.");
         gameObject.SetActive(false); // ✅ Fully disable after audio completes
     }
 }

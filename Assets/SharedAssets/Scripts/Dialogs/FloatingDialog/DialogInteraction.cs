@@ -43,9 +43,16 @@ public class DialogInteraction : MonoBehaviour
     {
         if (DialogTriggerButtonCenter != null && headPositionAnchor != null)
         {
-            DialogTriggerButtonCenter.transform.position = headPositionAnchor.position;
+            // ✅ Adjust only the X & Z position to follow the player, but keep the Y movement for bouncing
+            Vector3 targetPos = DialogTriggerButtonCenter.transform.position;
+            targetPos.x = headPositionAnchor.position.x;
+            targetPos.z = headPositionAnchor.position.z;
+
+            DialogTriggerButtonCenter.transform.position = targetPos; // ✅ Keeps bounce effect!
         }
     }
+
+
 
     void Start()
     {
@@ -56,13 +63,10 @@ public class DialogInteraction : MonoBehaviour
         }
 
         originalDialogPosition = floatingDialog.position;
-
         npcSpeechBubble.SetActive(false);
         dialogCloseButton.gameObject.SetActive(false);
 
         if (DialogTriggerButtonCenter != null) DialogTriggerButtonCenter.SetActive(true);
-        if (DialogTriggerButtonCorner != null) DialogTriggerButtonCorner.SetActive(false);
-
         if (DialogTriggerButtonCorner != null) DialogTriggerButtonCorner.SetActive(false);
 
         if (npcData != null) npcNameplate.text = npcData.npcName;
@@ -70,8 +74,18 @@ public class DialogInteraction : MonoBehaviour
         audioManager = GetComponent<DialogAudioManager>() ?? gameObject.AddComponent<DialogAudioManager>();
         textAnimator = GetComponent<DialogTextAnimator>() ?? gameObject.AddComponent<DialogTextAnimator>();
 
+        // ✅ Ensure we don't add multiple listeners
+        if (DialogTriggerButtonCorner != null)
+        {
+            Button btn = DialogTriggerButtonCorner.GetComponent<Button>();
+            if (btn != null)
+            {
+                btn.onClick.RemoveAllListeners(); // ✅ Remove duplicate listeners
+                btn.onClick.AddListener(ShowNextDialogLine); // ✅ Ensure only one event is assigned
+            }
+        }
+
         jumpRoutine = StartCoroutine(BounceDialogButton());
-        pulseRoutine = null;
     }
 
     public void OnNPCIconClick()
@@ -117,6 +131,12 @@ public class DialogInteraction : MonoBehaviour
     }
     private void ShowNextDialogLine()
     {
+        if (DialogTriggerButtonCorner != null)
+        {
+            DialogTriggerButtonCorner.GetComponent<Button>().interactable = false; // ⏳ Temporarily disable the button
+            StartCoroutine(EnableButtonAfterDelay(DialogTriggerButtonCorner, 0.2f)); // ✅ Prevent double clicks
+        }
+
         if (currentLineIndex >= npcData.dialogLines.Length)
         {
             CloseDialog();
@@ -131,6 +151,16 @@ public class DialogInteraction : MonoBehaviour
         }
 
         currentLineIndex++;
+    }
+
+    // ✅ Helper method to re-enable the button after a short delay
+    private IEnumerator EnableButtonAfterDelay(GameObject button, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (button != null)
+        {
+            button.GetComponent<Button>().interactable = true;
+        }
     }
 
     public void CloseDialog()
