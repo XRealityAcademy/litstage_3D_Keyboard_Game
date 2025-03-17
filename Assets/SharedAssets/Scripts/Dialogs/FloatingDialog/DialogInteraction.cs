@@ -6,64 +6,67 @@ using System.Collections;
 public class DialogInteraction : MonoBehaviour
 {
     [Header("UI Elements")]
-    public GameObject npcSpeechBubble;   // Dialog Panel (for visibility toggle)
-    public TextMeshProUGUI npcText;      // Dialog Text
-    public Button dialogCloseButton;     // Close Button (Closes dialog)
-    public TextMeshProUGUI npcNameplate; // Displays NPC name in the dialog
-    public Transform floatingDialog;     // FloatingDialog canvas reference
+    public GameObject npcSpeechBubble;
+    public TextMeshProUGUI npcText;
+    public Button dialogCloseButton;
+    public TextMeshProUGUI npcNameplate;
+    public Transform floatingDialog;
+    public Transform headPositionAnchor;
 
     [Header("Dialog Icons")]
-    public GameObject DialogTriggerButtonCenter;  // ✅ The icon above NPC's head
-    public GameObject DialogTriggerButtonCorner;  // ✅ The icon at the bottom-right of dialog
+    public GameObject DialogTriggerButtonCenter;
+    public GameObject DialogTriggerButtonCorner;
 
     [Header("Position Settings")]
-    private Vector3 originalDialogPosition; // Stores the initial position of the dialog
+    private Vector3 originalDialogPosition;
     private bool hasMoved = false;
 
+    [Header("Dialog Settings")]
+    public bool canRepeatDialog = true; // ✅ Allow replaying dialog
+    private bool hasPlayed = false;     // ✅ Track if dialog has been played
+
     [Header("NPC Data")]
-    public NPCDialogData npcData; // 📜 ScriptableObject for Dialog
+    public NPCDialogData npcData;
     private int currentLineIndex = 0;
 
     [Header("Audio Manager")]
-    private DialogAudioManager audioManager; //  Use external audio manager
-    private DialogTextAnimator textAnimator; // New Text Animator
+    private DialogAudioManager audioManager;
+    private DialogTextAnimator textAnimator;
 
-    private Vector3 bigButtonSize; // Normal dialog button size
-    private float animationDuration = 0.2f; // Animation duration
+    private Vector3 bigButtonSize;
+    private float animationDuration = 0.2f;
     private Coroutine jumpRoutine;
     private Coroutine pulseRoutine;
 
+
+    void LateUpdate()
+    {
+        if (DialogTriggerButtonCenter != null && headPositionAnchor != null)
+        {
+            DialogTriggerButtonCenter.transform.position = headPositionAnchor.position;
+        }
+    }
+
     void Start()
     {
-        // **Check if UI elements are assigned**
         if (npcSpeechBubble == null || npcText == null || dialogCloseButton == null)
         {
             Debug.LogError("⚠️ NPCInteraction: Missing UI elements in Inspector!");
             return;
         }
 
-        originalDialogPosition = floatingDialog.position; // Store initial position
+        originalDialogPosition = floatingDialog.position;
 
-        // **Initialize UI**
-        npcSpeechBubble.SetActive(false); // Hide dialog at start
+        npcSpeechBubble.SetActive(false);
         dialogCloseButton.gameObject.SetActive(false);
 
-        // **Ensure correct button visibility at start**
         if (DialogTriggerButtonCenter != null) DialogTriggerButtonCenter.SetActive(true);
         if (DialogTriggerButtonCorner != null) DialogTriggerButtonCorner.SetActive(false);
 
-        // **Ensure DialogTriggerButtonCorner stays in bottom-right corner**
-        // Ensure the button is initially hidden, but don't change its position
-        if (DialogTriggerButtonCorner != null)
-        {
-            DialogTriggerButtonCorner.SetActive(false);
-        }
+        if (DialogTriggerButtonCorner != null) DialogTriggerButtonCorner.SetActive(false);
 
-
-        // **Load NPC Data if available**
         if (npcData != null) npcNameplate.text = npcData.npcName;
 
-        // **Get or Add Components**
         audioManager = GetComponent<DialogAudioManager>() ?? gameObject.AddComponent<DialogAudioManager>();
         textAnimator = GetComponent<DialogTextAnimator>() ?? gameObject.AddComponent<DialogTextAnimator>();
 
@@ -73,42 +76,45 @@ public class DialogInteraction : MonoBehaviour
 
     public void OnNPCIconClick()
     {
-        // ✅ Move only ONCE
+        // ✅ Prevent replaying the entire conversation, but allow advancing it.
+        if (!canRepeatDialog && hasPlayed && currentLineIndex == 0)
+        {
+            Debug.Log("🔒 Dialog already played and cannot be restarted!");
+            return;
+        }
+
+        hasPlayed = true; // ✅ Mark the dialog as played only when starting
+
         if (!hasMoved)
         {
             hasMoved = true;
         }
 
-        // ✅ Switch Button Visibility (Hide center, Show corner)
         if (DialogTriggerButtonCenter != null) DialogTriggerButtonCenter.SetActive(false);
         if (DialogTriggerButtonCorner != null) DialogTriggerButtonCorner.SetActive(true);
 
-        // ✅ Stop bouncing effect
         if (jumpRoutine != null)
         {
             StopCoroutine(jumpRoutine);
             jumpRoutine = null;
         }
 
-        // ✅ Start pulsing effect
         if (pulseRoutine == null)
         {
             pulseRoutine = StartCoroutine(PulseButtonEffect());
         }
 
-        // ✅ If the speech bubble is inactive, activate it
         if (!npcSpeechBubble.activeSelf)
         {
-            StartCoroutine(AnimatePopup()); // Smooth pop-up animation
+            StartCoroutine(AnimatePopup());
         }
 
-        // ✅ Show the dialog text and play the sound
+        // ✅ Ensure dialog only starts if there is content
         if (npcData != null && npcData.dialogLines.Length > 0)
         {
-            ShowNextDialogLine();
+            ShowNextDialogLine(); // ✅ Always allow showing the next line
         }
     }
-
     private void ShowNextDialogLine()
     {
         if (currentLineIndex >= npcData.dialogLines.Length)
@@ -117,10 +123,8 @@ public class DialogInteraction : MonoBehaviour
             return;
         }
 
-        // ✅ Show the current dialog line
         npcText.text = npcData.dialogLines[currentLineIndex].text;
 
-        // ✅ Play the associated voice clip
         if (audioManager != null && npcData.dialogLines[currentLineIndex].voiceClip != null)
         {
             audioManager.PlayVoiceClip(npcData.dialogLines[currentLineIndex].voiceClip);
@@ -149,13 +153,21 @@ public class DialogInteraction : MonoBehaviour
             pulseRoutine = null;
         }
 
-        // ✅ Reset FloatingDialog position
         floatingDialog.position = originalDialogPosition;
         hasMoved = false;
 
-        // ✅ Switch Button Visibility Back (Show center, Hide corner)
-        if (DialogTriggerButtonCenter != null) DialogTriggerButtonCenter.SetActive(true);
-        if (DialogTriggerButtonCorner != null) DialogTriggerButtonCorner.SetActive(false);
+        // ✅ Hide the corner button when the dialog is finished
+        if (DialogTriggerButtonCorner != null)
+        {
+            DialogTriggerButtonCorner.SetActive(false);
+        }
+
+        // ✅ Show the center button only if the dialog can be repeated
+        if (canRepeatDialog && DialogTriggerButtonCenter != null)
+        {
+            DialogTriggerButtonCenter.SetActive(true);
+            DialogTriggerButtonCenter.transform.position = headPositionAnchor.position;
+        }
 
         jumpRoutine = StartCoroutine(BounceDialogButton());
     }
@@ -232,6 +244,6 @@ public class DialogInteraction : MonoBehaviour
             yield return null;
         }
 
-        DialogTriggerButtonCorner.transform.localScale = endScale; // ✅ Now only scales, doesn’t move!
+        DialogTriggerButtonCorner.transform.localScale = endScale;
     }
 }
