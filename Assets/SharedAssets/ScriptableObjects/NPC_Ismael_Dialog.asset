@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd8b7c6bd4282480c970b4ece7b43438, type: 3}
   m_Name: NPC_Ismael_Dialog
   m_EditorClassIdentifier: 
-  npcName: Ismael
+  npcName: Ishmael
   dialogLines:
   - text: Call me Ishmael. Some years ago;never mind how long precisely
     voiceClip: {fileID: 8300000, guid: fd08dcaa325f447c088f2988ffdf6fff, type: 3}

@@ -5004,6 +5004,10 @@ MonoBehaviour:
   triggerOnlyOnce: 1
   effectManager: {fileID: 1154446548}
   triggerSound: {fileID: 0}
+  eventToTrigger: 
+  eventObject: {fileID: 0}
+  startsHidden: 1
+  activationEvent: 
 --- !u!33 &254113185
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5340,6 +5344,10 @@ MonoBehaviour:
   triggerOnlyOnce: 1
   effectManager: {fileID: 0}
   triggerSound: {fileID: 8300000, guid: 067a8e1530929457ba07cb6c522b45f2, type: 3}
+  eventToTrigger: 
+  eventObject: {fileID: 0}
+  startsHidden: 1
+  activationEvent: 
 --- !u!54 &555739109
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11829,6 +11837,10 @@ MonoBehaviour:
   triggerOnlyOnce: 0
   effectManager: {fileID: 3801377344157410027}
   triggerSound: {fileID: 8300000, guid: 067a8e1530929457ba07cb6c522b45f2, type: 3}
+  eventToTrigger: 
+  eventObject: {fileID: 0}
+  startsHidden: 1
+  activationEvent: 
 --- !u!1 &1701283824210509823
 GameObject:
   m_ObjectHideFlags: 0
@@ -17702,6 +17714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogUI: {fileID: 3067408495418354480}
+  eventToListen: 
 --- !u!1 &3399816724489408082
 GameObject:
   m_ObjectHideFlags: 0
@@ -18022,6 +18035,10 @@ MonoBehaviour:
   triggerOnlyOnce: 1
   effectManager: {fileID: 0}
   triggerSound: {fileID: 8300000, guid: 067a8e1530929457ba07cb6c522b45f2, type: 3}
+  eventToTrigger: 
+  eventObject: {fileID: 0}
+  startsHidden: 1
+  activationEvent: 
 --- !u!33 &3744302371084624593
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -23440,6 +23457,10 @@ MonoBehaviour:
   triggerOnlyOnce: 1
   effectManager: {fileID: 1211846018047697159}
   triggerSound: {fileID: 8300000, guid: 7a4e4dcb8e6c34ed69f0a54de6195047, type: 3}
+  eventToTrigger: 
+  eventObject: {fileID: 0}
+  startsHidden: 1
+  activationEvent: 
 --- !u!54 &4449417577771104652
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23482,6 +23503,10 @@ MonoBehaviour:
   triggerOnlyOnce: 0
   effectManager: {fileID: 5333156719374611823}
   triggerSound: {fileID: 8300000, guid: 65f9e2c02a4cd44f5ac575026a9cbfe6, type: 3}
+  eventToTrigger: 
+  eventObject: {fileID: 0}
+  startsHidden: 0
+  activationEvent: 
 --- !u!114 &4543346243329265223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23880,7 +23905,7 @@ Transform:
   m_GameObject: {fileID: 6144177721415678077}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.011304894, w: 0.99993616}
-  m_LocalPosition: {x: 1.8847814, y: -49.59723, z: 42.511787}
+  m_LocalPosition: {x: 7.6, y: -49.7, z: 16.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24829,6 +24854,10 @@ MonoBehaviour:
   triggerOnlyOnce: 1
   effectManager: {fileID: 6367000692345518847}
   triggerSound: {fileID: 8300000, guid: 44e2e1ed3895c4a2ca33bece12979fb5, type: 3}
+  eventToTrigger: 
+  eventObject: {fileID: 0}
+  startsHidden: 1
+  activationEvent: 
 --- !u!81 &6347440155792234760
 AudioListener:
   m_ObjectHideFlags: 0
@@ -25660,6 +25689,10 @@ MonoBehaviour:
   triggerOnlyOnce: 1
   effectManager: {fileID: 0}
   triggerSound: {fileID: 8300000, guid: 067a8e1530929457ba07cb6c522b45f2, type: 3}
+  eventToTrigger: 
+  eventObject: {fileID: 0}
+  startsHidden: 1
+  activationEvent: 
 --- !u!1 &7720449662799417582
 GameObject:
   m_ObjectHideFlags: 0
@@ -25785,6 +25818,10 @@ MonoBehaviour:
   triggerOnlyOnce: 1
   effectManager: {fileID: 0}
   triggerSound: {fileID: 8300000, guid: 067a8e1530929457ba07cb6c522b45f2, type: 3}
+  eventToTrigger: 
+  eventObject: {fileID: 0}
+  startsHidden: 1
+  activationEvent: 
 --- !u!136 &7794194456710220793
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -25845,6 +25882,7 @@ MonoBehaviour:
   DialogTriggerButtonCorner: {fileID: 2193634264258570387}
   canRepeatDialog: 1
   npcData: {fileID: 11400000, guid: 8ce0e033b9c674b878eec7a8f9d70661, type: 2}
+  eventToTriggerOnClose: 
 --- !u!65 &7860287671974283513
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26345,6 +26383,10 @@ MonoBehaviour:
   triggerOnlyOnce: 1
   effectManager: {fileID: 0}
   triggerSound: {fileID: 8300000, guid: 067a8e1530929457ba07cb6c522b45f2, type: 3}
+  eventToTrigger: 
+  eventObject: {fileID: 0}
+  startsHidden: 1
+  activationEvent: 
 --- !u!222 &8554688264124227503
 CanvasRenderer:
   m_ObjectHideFlags: 0

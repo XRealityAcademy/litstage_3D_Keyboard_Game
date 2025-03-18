@@ -38,4 +38,9 @@ public class DialogAudioManager : MonoBehaviour
             audioSource.Stop();
         }
     }
+
+    public bool IsPlaying()
+    {
+        return audioSource != null && audioSource.isPlaying;
+    }
 }

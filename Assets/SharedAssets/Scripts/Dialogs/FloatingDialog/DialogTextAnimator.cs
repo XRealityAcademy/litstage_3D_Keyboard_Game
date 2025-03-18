@@ -5,6 +5,7 @@ using TMPro;
 public class DialogTextAnimator : MonoBehaviour
 {
     private Coroutine typingCoroutine;
+    private bool isPlaying = false; // ✅ Track animation state
 
     /// <summary>
     /// Starts the typewriter effect for the given text.
@@ -23,12 +24,16 @@ public class DialogTextAnimator : MonoBehaviour
     /// </summary>
     private IEnumerator TypeText(TextMeshProUGUI textComponent, string fullText, float speed)
     {
+        isPlaying = true; // ✅ Mark animation as active
         textComponent.text = "";
+
         foreach (char letter in fullText)
         {
             textComponent.text += letter;
             yield return new WaitForSeconds(speed); // ✅ Controls typing speed
         }
+
+        isPlaying = false; // ✅ Mark animation as finished
     }
 
     /// <summary>
@@ -41,5 +46,14 @@ public class DialogTextAnimator : MonoBehaviour
             StopCoroutine(typingCoroutine);
         }
         textComponent.text = fullText;
+        isPlaying = false; // ✅ Ensure it's marked as finished
+    }
+
+    /// <summary>
+    /// Checks if text animation is still playing.
+    /// </summary>
+    public bool IsPlaying()
+    {
+        return isPlaying;
     }
 }

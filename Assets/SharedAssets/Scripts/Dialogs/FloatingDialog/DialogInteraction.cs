@@ -33,10 +33,13 @@ public class DialogInteraction : MonoBehaviour
     private DialogAudioManager audioManager;
     private DialogTextAnimator textAnimator;
 
-    private Vector3 bigButtonSize;
-    private float animationDuration = 0.2f;
     private Coroutine jumpRoutine;
     private Coroutine pulseRoutine;
+
+    public string eventToTriggerOnClose; // ✅ Event to trigger when dialog closes
+
+    [Header("Visibility Settings")]
+    public string activationEvent; // ✅ The event that makes this visible
 
 
     void LateUpdate()
@@ -85,7 +88,127 @@ public class DialogInteraction : MonoBehaviour
             }
         }
 
+        if (!string.IsNullOrEmpty(activationEvent))
+        {
+            EventManager.Subscribe(activationEvent, showDialogAutomatically);
+        }
+
         jumpRoutine = StartCoroutine(BounceDialogButton());
+    }
+
+    public void showDialogAutomatically()
+    {
+        Debug.LogError("🔥 ShowDialogAutomatically() CALLED!");
+
+        if (npcSpeechBubble == null)
+        {
+            Debug.LogError("❌ npcSpeechBubble is NULL! Cannot show dialog.");
+            return;
+        }
+
+        npcSpeechBubble.SetActive(true);
+
+        if (npcData != null)
+        {
+            npcNameplate.text = npcData.npcName;
+        }
+
+        if (DialogTriggerButtonCenter != null)
+            DialogTriggerButtonCenter.SetActive(true);
+
+        if (DialogTriggerButtonCorner != null)
+            DialogTriggerButtonCorner.SetActive(false);
+
+        ShowNextDialogLineAutomatically();
+    }
+
+    private void ShowNextDialogLineAutomatically()
+    {
+        if (currentLineIndex >= npcData.dialogLines.Length)
+        {
+            CloseDialog();
+            return;
+        }
+
+        string lineText = npcData.dialogLines[currentLineIndex].text;
+        AudioClip voiceClip = npcData.dialogLines[currentLineIndex].voiceClip;
+
+        Debug.Log($"🎤 Playing Line {currentLineIndex}: {lineText}");
+
+        // ✅ Use DialogTextAnimator to animate text
+        if (textAnimator != null)
+        {
+            textAnimator.AnimateText(npcText, lineText);
+        }
+        else
+        {
+            npcText.text = lineText; // Fallback if no animator exists
+        }
+
+        // ✅ Play voice audio
+        if (audioManager != null && voiceClip != null)
+        {
+            audioManager.PlayVoiceClip(voiceClip);
+        }
+
+        // ✅ Move to the next line after text/audio finishes
+        StartCoroutine(WaitForTextAndAudio(voiceClip));
+    }
+
+    private IEnumerator WaitForTextAndAudio(AudioClip voiceClip)
+    {
+        // ✅ Step 1: Ensure text animation finishes
+        if (textAnimator != null)
+        {
+            while (textAnimator.IsPlaying()) // Wait until text animation completes
+            {
+                yield return null;
+            }
+        }
+
+        // ✅ Step 2: Ensure voice clip plays and finishes
+        if (voiceClip != null)
+        {
+            float audioDuration = voiceClip.length;
+
+            if (audioManager != null && audioManager.IsPlaying())
+            {
+                while (audioManager.IsPlaying()) // 🔥 Wait for audio to finish
+                {
+                    yield return null;
+                }
+            }
+            else
+            {
+                yield return new WaitForSeconds(audioDuration); // Fallback wait
+            }
+        }
+
+        // ✅ Step 3: Move to the next line or close the dialog
+        currentLineIndex++;
+
+        if (currentLineIndex < npcData.dialogLines.Length)
+        {
+            Debug.Log($"🔄 Moving to next line: {currentLineIndex}");
+            ShowNextDialogLineAutomatically();
+        }
+        else
+        {
+            Debug.Log("✅ Finished all dialog lines, closing dialog...");
+            CloseDialog();
+
+            if (!string.IsNullOrEmpty(eventToTriggerOnClose))
+            {
+                Debug.Log($"📢 Triggering event after dialog: '{eventToTriggerOnClose}'");
+                EventManager.TriggerEvent(eventToTriggerOnClose);
+            }
+        }
+    }
+
+    private IEnumerator AnimatePopupAndShowText()
+    {
+        yield return AnimatePopup(); // ✅ Wait for the animation to complete
+        ShowNextDialogLine();        // ✅ Then start the dialog text animation
     }
 
     public void OnNPCIconClick()
@@ -133,7 +256,7 @@ public class DialogInteraction : MonoBehaviour
     {
         if (DialogTriggerButtonCorner != null)
         {
-            DialogTriggerButtonCorner.GetComponent<Button>().interactable = false; // ⏳ Temporarily disable the button
+            DialogTriggerButtonCorner.GetComponent<Button>().interactable = false; // ⏳ Temporarily disable button
             StartCoroutine(EnableButtonAfterDelay(DialogTriggerButtonCorner, 0.2f)); // ✅ Prevent double clicks
         }
 
@@ -143,11 +266,23 @@ public class DialogInteraction : MonoBehaviour
             return;
         }
 
-        npcText.text = npcData.dialogLines[currentLineIndex].text;
+        string lineText = npcData.dialogLines[currentLineIndex].text;
+        AudioClip voiceClip = npcData.dialogLines[currentLineIndex].voiceClip;
 
-        if (audioManager != null && npcData.dialogLines[currentLineIndex].voiceClip != null)
+        // ✅ Animate Text
+        if (textAnimator != null)
         {
-            audioManager.PlayVoiceClip(npcData.dialogLines[currentLineIndex].voiceClip);
+            textAnimator.AnimateText(npcText, lineText);
+        }
+        else
+        {
+            npcText.text = lineText; // Fallback if no animator
+        }
+
+        // ✅ Play voice audio
+        if (audioManager != null && voiceClip != null)
+        {
+            audioManager.PlayVoiceClip(voiceClip);
         }
 
         currentLineIndex++;
@@ -196,10 +331,25 @@ public class DialogInteraction : MonoBehaviour
         if (canRepeatDialog && DialogTriggerButtonCenter != null)
         {
             DialogTriggerButtonCenter.SetActive(true);
-            DialogTriggerButtonCenter.transform.position = headPositionAnchor.position;
+            if (headPositionAnchor!=null){
+                DialogTriggerButtonCenter.transform.position = headPositionAnchor.position;
+            }
+            
         }
 
         jumpRoutine = StartCoroutine(BounceDialogButton());
+
+        // ✅ Fire the event to show the Trigger Zone after closing
+        if (!string.IsNullOrEmpty(eventToTriggerOnClose))
+        {
+            Debug.Log($"📢 Trying to trigger event: '{eventToTriggerOnClose}'"); // Add Debug
+            EventManager.TriggerEvent(eventToTriggerOnClose);
+        }
+        else
+        {
+            Debug.LogError("❌ eventToTriggerOnClose is EMPTY! Cannot trigger event.");
+        }
+
     }
 
     private IEnumerator AnimatePopup()

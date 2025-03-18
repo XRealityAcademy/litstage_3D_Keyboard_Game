@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd8b7c6bd4282480c970b4ece7b43438, type: 3}
+  m_Name: A1_Loomings_B1_04
+  m_EditorClassIdentifier: 
+  npcName: Narrator
+  dialogLines:
+  - text: 'Whenever the city feels oppressive and routine suffocates, I find solace
+      in the ocean''s vastness, where landbound troubles diminish. Watching scarred
+      whaling ships at the wharves ignites my desire for adventure and a deeper connection
+      with nature, compelling me to join a whaling voyage not for profit but to cleanse
+      my soul alongside seasoned sailors. '
+    voiceClip: {fileID: 8300000, guid: 9e6ebe083e10040e9bd47e9a7c59ad02, type: 3}
+  - text: As night falls, I navigate the narrow streets in search of lodging, encountering
+      a weathered inn that promises rest and the start of an epic journey. Unbeknownst
+      to me, this seemingly ordinary place is the beginning of a transformative quest
+      that will test my courage, forge camaraderie, and confront the formidable forces
+      of the sea.
+    voiceClip: {fileID: 8300000, guid: 48d23346e6c754576b43452c7363ccf3, type: 3}

@@ -4,10 +4,23 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
-    // ✅ Dictionary to store event subscribers
+    private static EventManager instance;
     private static Dictionary<string, Action> eventDictionary = new Dictionary<string, Action>();
 
-    // ✅ Subscribe to an event
+    void Awake()
+    {
+        // ✅ Ensure only ONE instance of EventManager exists (Singleton)
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject); // ✅ Persist across scenes
+        }
+        else
+        {
+            Destroy(gameObject); // ✅ Destroy duplicates
+        }
+    }
+
     public static void Subscribe(string eventName, Action listener)
     {
         if (!eventDictionary.ContainsKey(eventName))
@@ -16,11 +29,10 @@ public class EventManager : MonoBehaviour
         }
         else
         {
-            eventDictionary[eventName] += listener; // ✅ Add another listener
+            eventDictionary[eventName] += listener;
         }
     }
 
-    // ✅ Unsubscribe from an event (optional)
     public static void Unsubscribe(string eventName, Action listener)
     {
         if (eventDictionary.ContainsKey(eventName))
@@ -29,13 +41,14 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    // ✅ Trigger an event
     public static void TriggerEvent(string eventName)
     {
         if (eventDictionary.ContainsKey(eventName))
         {
             Debug.Log($"🔥 Event Triggered: {eventName}");
-            eventDictionary[eventName]?.Invoke(); // ✅ Notify all listeners
+            eventDictionary[eventName]?.Invoke();
         }
     }
+
+
 }

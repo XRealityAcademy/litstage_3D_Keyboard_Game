@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scene_Loomings/Scene_Loomings.unity
+    guid: fd8405258eac94e74822011226844ae6
+  - enabled: 1
+    path: Assets/Scene_NPC_PointAndClick/Scene_NPC_PointAndClick.unity
+    guid: d09b821b5db0e49ecbc27a6eb67ba734
   m_configObjects: {}
