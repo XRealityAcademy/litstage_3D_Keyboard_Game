@@ -15,7 +15,7 @@ public class DialogContainer : MonoBehaviour
 
         // ✅ Ensure it starts inactive
         dialogUI.SetActive(false);
-        Debug.Log("🔹 Dialog initialized as HIDDEN.");
+        //Debug.Log("🔹 Dialog initialized as HIDDEN.");
     }
 
     // ✅ Show or hide the dialog

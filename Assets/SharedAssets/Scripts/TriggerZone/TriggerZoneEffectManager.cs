@@ -48,7 +48,7 @@ public class TriggerZoneEffectManager : MonoBehaviour
     {
         if (!effectsActive) return; // ✅ Ensure effects are only disabled once
 
-        Debug.Log($"🔴 [{gameObject.name}] Deactivating All Effects...");
+//        Debug.Log($"🔴 [{gameObject.name}] Deactivating All Effects...");
 
         expandingEffect?.gameObject.SetActive(false); // ✅ Deactivate ONLY its own effect
         colorEffect?.gameObject.SetActive(false); // ✅ Deactivate ONLY its own color effect
