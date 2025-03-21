@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A3_5_TheSermon_Narrator
+  m_EditorClassIdentifier: 
+  dialogueId: narrator_sermon
+  dialogueLines:
+  - text: Father Mapple ascended the pulpit with the same ritualistic grace as before,
+      the act imbued with symbolic significance. His countenance was solemn yet compassionate,
+      eyes surveying the congregation with a depth of understanding that seemed to
+      penetrate to the very soul.
+    voiceClip: {fileID: 0}
+  - text: "He resumed his discourse on Jonah, delving deeper into the nuances of
+      the narrative. His words painted vivid scenes\u2014the storm-tossed ship, the
+      casting of lots, the reluctant acceptance of fate as Jonah was hurled into
+      the raging sea. Father Mapple expounded upon the themes of divine will and
+      human agency, exploring the tension between surrender and defiance."
+    voiceClip: {fileID: 0}
+  - text: "At the heart of his sermon was the concept of redemption through acknowledgment
+      and acceptance of one's path. He spoke of the whale not as a monster but as
+      a means of deliverance, a catalyst for transformation. The parallels to the
+      lives of whalemen were unmistakable\u2014the pursuit of the formidable leviathan
+      mirroring the inner struggles faced by each individual."
+    voiceClip: {fileID: 0}

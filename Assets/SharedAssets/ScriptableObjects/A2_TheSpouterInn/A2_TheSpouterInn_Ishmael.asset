@@ -9,17 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd8b7c6bd4282480c970b4ece7b43438, type: 3}
-  m_Name: A2_TheSpouterInn_Ismael
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A2_TheSpouterInn_Ishmael
   m_EditorClassIdentifier: 
-  npcName: Ismael
-  dialogLines:
+  dialogueId: ishmael_intro
+  dialogueLines:
   - text: "It was a queer sort of place\u2014a gable-ended old house,"
-    voiceClip: {fileID: 8300000, guid: 7a4e4dcb8e6c34ed69f0a54de6195047, type: 3}
+    voiceClip: {fileID: 8300000, guid: 402a5a1e218eb4735a68ffcb1691fa50, type: 3}
   - text: one side palsied as it were, and leaning over sadly.
-    voiceClip: {fileID: 8300000, guid: 1ae8322e1003f4cdcaaeaa2d4e07f4d5, type: 3}
+    voiceClip: {fileID: 8300000, guid: 86e47b9f4b2ca4e8dbf108c9db8b7da9, type: 3}
   - text: It stood on a sharp bleak corner, where that tempestuous wind Euroclydon
     voiceClip: {fileID: 8300000, guid: 6fee672e2f04643c18774c1eb5a4a35f, type: 3}
   - text: "kept up a worse howling than ever it did about poor Paul\u2019s tossed
       craft."
-    voiceClip: {fileID: 8300000, guid: 067a8e1530929457ba07cb6c522b45f2, type: 3}
+    voiceClip: {fileID: 8300000, guid: ff3bd0daadb0a419b91fba310d6049c2, type: 3}

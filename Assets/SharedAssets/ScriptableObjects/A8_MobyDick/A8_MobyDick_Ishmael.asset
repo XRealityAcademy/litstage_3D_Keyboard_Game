@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A8_MobyDick_Ishmael
+  m_EditorClassIdentifier: 
+  dialogueId: ishmael_white_whale_fear
+  dialogueLines:
+  - text: And as for those who, previously hearing of the White Whale, by chance
+      caught sight of him;
+    voiceClip: {fileID: 0}
+  - text: 'in the beginning of the thing they had every one of them, almost, as boldly
+      and fearlessly lowered for him, as for any other whale of that species. '
+    voiceClip: {fileID: 0}
+  - text: "But at length, such calamities did ensue in these assaults\u2014 not restricted
+      to sprained wrists and ankles, broken limbs,"
+    voiceClip: {fileID: 0}
+  - text: "or devouring amputations\u2014but fatal to the last degree of fatality;"
+    voiceClip: {fileID: 0}
+  - text: 'those repeated disastrous repulses, all accumulating and piling their
+      terrors upon Moby Dick; '
+    voiceClip: {fileID: 0}
+  - text: those things had gone far to shake the fortitude of many brave hunters,
+      to whom the story of the White Whale had eventually come.
+    voiceClip: {fileID: 0}

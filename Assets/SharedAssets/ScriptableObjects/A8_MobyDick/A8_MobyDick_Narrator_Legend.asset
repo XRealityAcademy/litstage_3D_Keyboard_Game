@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A8_MobyDick_Narrator_Legend
+  m_EditorClassIdentifier: 
+  dialogueId: narrator_moby_dick_legend
+  dialogueLines:
+  - text: "The name of the white whale surged through the crew like an undercurrent,
+      a moniker whispered with equal parts awe and dread\u2014Moby Dick. Tales of
+      the leviathan had circled the seafaring world, each account more fantastical
+      than the last. Some spoke of him as a ghostly apparition, a specter of the
+      deep; others swore he was an incarnation of the very sea's wrath."
+    voiceClip: {fileID: 0}
+  - text: One afternoon, as the ship sliced through calm waters, I sought out Starbuck.
+      The first mate stood at the helm, his gaze fixed on the horizon.
+    voiceClip: {fileID: 0}
+  - text: '"Mr. Starbuck," I began tentatively, "may I ask you about Moby Dick?"'
+    voiceClip: {fileID: 0}
+  - text: 'Starbuck turned, his eyes reflective. '
+    voiceClip: {fileID: 0}

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a92d614faaa241759c695c503476f44, type: 3}
+  m_Name: A5_TheProphet
+  m_EditorClassIdentifier: 
+  sceneName: A5_TheProphet
+  characters:
+  - characterName: ishmael
+    dialogueHandler:
+      dialogueReferences:
+      - {fileID: 11400000, guid: 66b9e3a95fbb14022822a2a3e58c9464, type: 2}
+  - characterName: narrator
+    dialogueHandler:
+      dialogueReferences:
+      - {fileID: 11400000, guid: 4dd9e0d4de9ed44b992a467405ae916a, type: 2}
+      - {fileID: 11400000, guid: e1396f49ee30947f283c4abab9d3f4d1, type: 2}
+      - {fileID: 11400000, guid: f46cdbdf4af344796b50da20e54145cb, type: 2}
+      - {fileID: 11400000, guid: d46d382d89b404843bf9d55e48cfbdb5, type: 2}
+  - characterName: theprophet
+    dialogueHandler:
+      dialogueReferences:
+      - {fileID: 11400000, guid: 1c840ae572fa14066925175bc27c7fef, type: 2}
+      - {fileID: 11400000, guid: 1542f271f40714cb49cfe8b4d6520588, type: 2}
+  - characterName: queequeg
+    dialogueHandler:
+      dialogueReferences:
+      - {fileID: 11400000, guid: 2d88427a38c9d4cb386982b883f45267, type: 2}

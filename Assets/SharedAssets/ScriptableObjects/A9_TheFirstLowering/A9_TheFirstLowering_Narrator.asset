@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A9_TheFirstLowering_Narrator
+  m_EditorClassIdentifier: 
+  dialogueId: narrator_ahab_obsession_grows
+  dialogueLines:
+  - text: As the Pequod ventured into rich whaling waters, the crew eagerly responded
+      to a sighting, with Captain Ahab personally leading a mysterious fourth boat
+      alongside Fedallah's enigmatic harpooneers. Experiencing his first hunt, I
+      joined Queequeg and successfully harpooned a sizable sperm whale, while Ahab
+      relentlessly pursued a larger, more formidable creature.
+    voiceClip: {fileID: 0}
+  - text: The chase turned disastrous when Ahab's boat was destroyed by the whale,
+      forcing him into the sea where Starbuck reluctantly rescued him. This near-tragedy
+      heightened tensions among the crew, casting doubt on Ahab's judgment and deepening
+      his obsessive fixation on capturing Moby Dick. As the Pequod continued its
+      voyage, we sensed being inexorably drawn into Ahab's perilous quest, while
+      the vast, indifferent sea concealed the relentless white whale beneath its
+      surface
+    voiceClip: {fileID: 0}

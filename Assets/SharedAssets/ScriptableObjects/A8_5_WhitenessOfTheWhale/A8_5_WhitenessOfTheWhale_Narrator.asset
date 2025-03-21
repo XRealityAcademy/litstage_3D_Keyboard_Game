@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A8_5_WhitenessOfTheWhale_Narrator
+  m_EditorClassIdentifier: 
+  dialogueId: narrator_symbolic_whiteness
+  dialogueLines:
+  - text: "Moby Dick\u2019s eerie whiteness stirred a primal unease within the crew,
+      setting it apart from any ordinary whale. One day, as I pondered this with
+      Queequeg, I learned that, for some, white symbolized the afterlife, while to
+      others, it hinted at something both pure and terrifying. In the mess hall,
+      sailors debated the significance of this ghostly hue, some seeing it as an
+      omen, others dismissing it as superstition."
+    voiceClip: {fileID: 0}
+  - text: "Even Ahab couldn\u2019t escape its symbolic weight, calling it a mocking
+      fa\xE7ade concealing malice. As the Pequod ventured south, I reflected that
+      the whale\u2019s whiteness seemed to mirror our deepest fears\u2014a void and
+      a mystery that terrified us as much as the creature itself."
+    voiceClip: {fileID: 0}

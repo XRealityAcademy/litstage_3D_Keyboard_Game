@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a92d614faaa241759c695c503476f44, type: 3}
+  m_Name: A15_1_TheChaseSecondDay
+  m_EditorClassIdentifier: 
+  sceneName: A15_1_TheChaseSecondDay
+  characters:
+  - characterName: ahab
+    dialogueHandler:
+      dialogueReferences:
+      - {fileID: 11400000, guid: de444961661a14635ad826b9769ab2d4, type: 2}
+      - {fileID: 11400000, guid: ce0efc8e2d5e14ca2bcccaab1d5630be, type: 2}
+  - characterName: ishmael
+    dialogueHandler:
+      dialogueReferences:
+      - {fileID: 11400000, guid: 2636640261d144967bf3cd560b567252, type: 2}
+  - characterName: narrator
+    dialogueHandler:
+      dialogueReferences:
+      - {fileID: 11400000, guid: 3d40ce496d2194f9ab0b92143683e661, type: 2}

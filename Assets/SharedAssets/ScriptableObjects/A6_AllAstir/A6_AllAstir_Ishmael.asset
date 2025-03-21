@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A6_AllAstir_Ishmael
+  m_EditorClassIdentifier: 
+  dialogueId: ishmael_ship_preparations
+  dialogueLines:
+  - text: A day or two passed, and there was great activity aboard the Pequod.
+    voiceClip: {fileID: 0}
+  - text: Not only were the old sails being mended, but new sails were coming on
+      board, and bolts of canvas, and coils of rigging;
+    voiceClip: {fileID: 0}
+  - text: in short, everything betokened that the ship's preparations were hurrying
+      to a close.
+    voiceClip: {fileID: 0}

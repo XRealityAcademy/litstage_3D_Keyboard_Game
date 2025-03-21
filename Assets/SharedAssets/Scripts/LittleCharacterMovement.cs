@@ -126,32 +126,30 @@ public class LittleCharacterMovement : MonoBehaviour
 
         foreach (RaycastResult result in results)
         {
-            //Debug.Log($"🖱️ UI Raycast Hit: {result.gameObject.name}"); // Debugging UI clicks
-
-            // ✅ **If clicking on NPC UI Elements, prevent movement**
             if ((result.gameObject.CompareTag("NPC_ClickableIcon") ||
                 result.gameObject.CompareTag("NPC_Text") ||
                 result.gameObject.CompareTag("NPC_CloseButton")) && Input.GetMouseButtonDown(0))
             {
-                //Debug.Log("🖱️ Clicked on: " + result.gameObject.name);
-                //Debug.Log("🟡 Clicked on UI Element (NPC) - Ignoring movement!");
-
-                // 🛠️ Try to find DialogInteraction in the parent
                 DialogInteraction dialogInteraction = result.gameObject.GetComponentInParent<DialogInteraction>();
+                DialogInteractionV2 dialogInteractionV2 = result.gameObject.GetComponentInParent<DialogInteractionV2>();
 
                 if (dialogInteraction != null)
                 {
                     dialogInteraction.OnNPCIconClick();
+                    return true;
+                }
+                else if (dialogInteractionV2 != null)
+                {
+                    dialogInteractionV2.OnNPCIconClick(); // ✅ Now correctly calls OnNPCIconClick()
+                    return true;
                 }
                 else
                 {
-                    Debug.LogError("❌ DialogInteraction NOT found on: " + result.gameObject.name);
+                    Debug.LogError("❌ No valid DialogInteraction found on: " + result.gameObject.name);
                 }
-
-                return true; // ✅ Prevent movement when clicking NPC UI
             }
         }
 
-        return false; // ✅ Allow movement when clicking WalkableGround
+        return false;
     }
 }

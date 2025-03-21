@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A2_TheSpouterInn_Narrator_Realization
+  m_EditorClassIdentifier: 
+  dialogueId: narrator_realization
+  dialogueLines:
+  - text: As he undressed, revealing his checkered skin, I was convinced he was some
+      savage from the South Seas. When he pulled out a small, hunched idol and began
+      a strange ritual by the fireplace, my unease only grew. Then, to my horror,
+      he climbed into bed with me, tomahawk in his teeth, and I cried out
+    voiceClip: {fileID: 0}
+  - text: "The landlord burst in just in time, reassuring me that this strange harpooneer,
+      Queequeg, meant no harm. Hesitantly, I agreed to share the bed, realizing he
+      was just as human as I was. \"Better sleep with a sober cannibal than a drunken
+      Christian,\" I thought, and soon settled down for the best night's sleep I\u2019d
+      had. "
+    voiceClip: {fileID: 0}

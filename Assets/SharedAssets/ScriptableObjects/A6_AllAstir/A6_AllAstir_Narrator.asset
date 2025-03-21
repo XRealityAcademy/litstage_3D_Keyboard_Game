@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A6_AllAstir_Narrator
+  m_EditorClassIdentifier: 
+  dialogueId: narrator_pequod_departure
+  dialogueLines:
+  - text: "The time to depart had come. The Pequod\u2019s sails unfurled. As the
+      ship drifted from the dock, Nantucket faded into the distance. Captain Ahab
+      was absent, leaving the mates\u2014Starbuck, Stubb, and Flask\u2014to manage
+      the deck. Starbuck moved with quiet resolve, Stubb with a smile and pipe, while
+      Flask held a solid, dependable air. "
+    voiceClip: {fileID: 0}
+  - text: "The crew settled into their routines, forming camaraderie through shared
+      work and purpose. As night fell, whispers of Ahab\u2019s obsession circulated,
+      his presence looming. Queequeg and I stood at the rail, gazing at the moonlit
+      sea, a mix of excitement and unease filling the air. The journey had begun,
+      a venture into the unknown, with the Pequod carrying us deeper into fate\u2019s
+      mysterious depths."
+    voiceClip: {fileID: 0}

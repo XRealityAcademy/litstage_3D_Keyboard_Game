@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A7_Ahab_Narrator
+  m_EditorClassIdentifier: 
+  dialogueId: narrator_ahab_revealed
+  dialogueLines:
+  - text: 'On a bleak morning, Captain Ahab finally emerged on the deck, revealing
+      himself fully to the crew. Tall and scarred, with a whalebone leg tapping rhythmically,
+      he commanded attention with a fierce intensity. Addressing the men, he announced
+      their mission: to hunt the legendary white whale, Moby Dick, the beast that
+      had taken his leg.'
+    voiceClip: {fileID: 0}
+  - text: "Ahab promised a gold doubloon to the man who first sighted the whale,
+      igniting excitement and unease among the crew. Starbuck voiced caution, fearing
+      the perilous path Ahab\u2019s vengeance could bring, but Ahab dismissed him,
+      declaring his pursuit of Moby Dick a cosmic battle. With murmurs of awe and
+      apprehension, the Pequod sailed onward, its crew bound to Ahab\u2019s relentless
+      quest against the sea\u2019s vast, shadowed unknown."
+    voiceClip: {fileID: 0}

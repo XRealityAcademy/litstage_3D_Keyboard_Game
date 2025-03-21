@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A11_TheTryWorks_Narrator
+  m_EditorClassIdentifier: 
+  dialogueId: narrator_tryworks_reflection
+  dialogueLines:
+  - text: 'The American whaler''s defining feature, besides her boats, is her try-works,
+      a solid brick structure used to render whale oil, adding both weight and unique
+      appearance to the vessel. Positioned between masts, this masonry holds iron
+      pots for boiling blubber, making the ship resemble a floating forge. '
+    voiceClip: {fileID: 0}
+  - text: "Working with blubber, the harpooneers maintain intense fires, creating
+      eerie, smoke-filled scenes. For sailors, staring into these flames too long
+      stirs visions, madness, and, occasionally, insights about the world\u2019s
+      darker, unexplored places\u2014hinting at the haunting depths of human existence."
+    voiceClip: {fileID: 0}

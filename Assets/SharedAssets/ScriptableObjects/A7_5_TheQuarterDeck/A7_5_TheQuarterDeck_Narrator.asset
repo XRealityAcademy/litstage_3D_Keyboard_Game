@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A7_5_TheQuarterDeck_Narrator
+  m_EditorClassIdentifier: 
+  dialogueId: narrator_ahab_oath
+  dialogueLines:
+  - text: As the sun set, Captain Ahab emerged on deck, summoning the crew with a
+      fiery gaze. Holding up a gold doubloon, he promised it to the first man to
+      sight the white whale, Moby Dick. The crew murmured with excitement and dread,
+      their eyes fixed on the coin Ahab hammered to the mast as a symbol of his obsession.
+    voiceClip: {fileID: 0}
+  - text: Starbuck voiced caution, warning against vengeance, but Ahab dismissed
+      him, determined to hunt Moby Dick to the ends of the earth. The crew, drawn
+      by the allure of gold and the thrill of the chase, swore an oath with raised
+      cups and hands. As night fell, Ahab, alone at the prow, whispered to the sea,
+      feeling his fate entwined with the great whale as the Pequod sailed into the
+      unknown.
+    voiceClip: {fileID: 0}

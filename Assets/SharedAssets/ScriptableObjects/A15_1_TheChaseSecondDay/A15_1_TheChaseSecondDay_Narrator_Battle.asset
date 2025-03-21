@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A15_1_TheChaseSecondDay_Narrator_Battle
+  m_EditorClassIdentifier: 
+  dialogueId: narrator_second_day_battle
+  dialogueLines:
+  - text: "At dawn, Ahab ordered the crew to search for Moby Dick, but the initial
+      watch revealed nothing. Still, Ahab remained fixated, convinced the whale was
+      near. His intense obsession drove the crew to abandon fear and become unified
+      in their pursuit, swept up by the ship\u2019s relentless speed as they surged
+      through the waves."
+    voiceClip: {fileID: 0}
+  - text: "Eventually, Moby Dick was sighted, not through his typical spout but by
+      breaching dramatically from the sea, casting foam into the air. Ahab, elated
+      by the sight, rallied his men, and the chase resumed. They lowered the boats,
+      and Ahab planned a head-on approach, knowing that a direct strike to the whale\u2019s
+      forehead might evade its sidelong vision."
+    voiceClip: {fileID: 0}
+  - text: "Moby Dick met them with fierce resistance, thrashing his tail and teeth
+      into the boats, turning the ocean into a battlefield. In the ensuing chaos,
+      Ahab's boat was ensnared in tangled lines, the whale\u2019s powerful movements
+      dragging them perilously close. As he attempted to free his boat, Moby Dick
+      crashed against it, throwing Ahab and his crew into the sea."
+    voiceClip: {fileID: 0}
+  - text: The Pequod arrived in time to rescue the survivors, though Ahab had suffered
+      further injuries, his ivory leg broken again. Undeterred, Ahab stood on deck,
+      rallying his men, asserting his commitment to face Moby Dick one last time.
+      Night fell as the crew worked tirelessly, readying their boats and sharpening
+      weapons, while Ahab stared eastward, awaiting the dawn and the fateful encounter.
+    voiceClip: {fileID: 0}

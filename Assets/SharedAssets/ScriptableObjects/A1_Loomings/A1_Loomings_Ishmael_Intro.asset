@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A1_Loomings_Ishmael_Intro
+  m_EditorClassIdentifier: 
+  dialogueId: intro
+  dialogueLines:
+  - text: "Call me Ishmael. Some years ago\u2014never mind how long precisely"
+    voiceClip: {fileID: 8300000, guid: fd08dcaa325f447c088f2988ffdf6fff, type: 3}
+  - text: having little or no money in my purse, and nothing particular to interest
+      me on shore,
+    voiceClip: {fileID: 8300000, guid: 4f75d2e0742444468bc257d7e7b6ed3e, type: 3}
+  - text: I thought I would sail about a little and see the watery part of the world.
+    voiceClip: {fileID: 8300000, guid: e03a3ce9b21834d08bd7b2dcc2081f6e, type: 3}

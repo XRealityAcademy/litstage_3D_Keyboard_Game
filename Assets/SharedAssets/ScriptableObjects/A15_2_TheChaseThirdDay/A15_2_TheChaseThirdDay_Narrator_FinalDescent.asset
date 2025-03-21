@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A15_2_TheChaseThirdDay_Narrator_FinalDescent
+  m_EditorClassIdentifier: 
+  dialogueId: narrator_final_descent
+  dialogueLines:
+  - text: "The dawn of the third day saw Ahab\u2019s obsession undeterred as he rallied
+      his crew to find Moby Dick. Despite an ominous calm and Starbuck\u2019s pleas
+      to abandon the hunt, Ahab remained resolute, readying his men and boats for
+      the chase. Around noon, Moby Dick was finally spotted, breaching with terrifying
+      force. Ahab ordered the boats lowered, and the men rowed hard, only to face
+      the white whale\u2019s fury as he charged their boats, snapping oars and hurling
+      the crew into the waves."
+    voiceClip: {fileID: 0}
+  - text: "As Ahab closed in, he saw the body of Fedallah, his prophetic companion,
+      entangled on Moby Dick\u2019s back\u2014an eerie fulfillment of the prophecy
+      of two hearses. Ahab\u2019s rage grew, and he threw his harpoon into the whale,
+      shouting curses as it embedded. The whale writhed, and Ahab\u2019s boat was
+      tossed, but he clung on, commanding his crew to press forward.\n"
+    voiceClip: {fileID: 0}
+  - text: The Pequod itself was not spared. Moby Dick turned his wrath upon the ship,
+      ramming its hull with his massive head, and the Pequod began to sink, drawing
+      the crew and ship into a whirlpool. Ahab, refusing to relent, cast one final
+      harpoon, but as the line caught and whipped, it entangled him, pulling him
+      from the boat to his death.
+    voiceClip: {fileID: 0}
+  - text: 'The sea engulfed the Pequod and all aboard. Only the flag, nailed by Tashtego
+      as he sank, and the circling birds above marked where the ship had been. The
+      ocean calmed, rolling on as if the Pequod and her crew had never been.
+
+'
+    voiceClip: {fileID: 0}

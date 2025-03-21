@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A15_TheChaseDay1_Narrator_FirstDay
+  m_EditorClassIdentifier: 
+  dialogueId: narrator_chase_first_day
+  dialogueLines:
+  - text: "That night, Ahab emerged from his quarters, sniffing the air with an animalistic
+      sense, declaring the presence of a whale nearby. The distinct smell of a sperm
+      whale was detected by the crew, confirming Ahab's instinct. Under his orders,
+      they altered the ship's course, and by daybreak, a shimmering trail appeared
+      on the sea, marking the path of a massive whale. As Ahab climbed the mast,
+      his eyes locked on a hump in the distance\u2014Moby Dick."
+    voiceClip: {fileID: 0}
+  - text: The crew scrambled into action, spurred by Ahab's cries, and soon all eyes
+      were on the horizon, watching the silent, powerful spout of the great white
+      whale. The boats were lowered, and Ahab led the charge, his obsession filling
+      the men with a mix of dread and anticipation. Fedallah, Ahab's eerie companion,
+      was calm, even as they neared the beast.
+    voiceClip: {fileID: 0}
+  - text: As they approached, Moby Dick's serene, mighty form glided through the
+      water, his body creating a peaceful, foamy wake. The hunters were momentarily
+      captivated by his grace and enormity, some feeling awe in the calm he projected.
+      But as they closed in, the atmosphere grew tense; Ahab's intense focus was
+      palpable, driving them to engage despite the foreboding serenity.
+    voiceClip: {fileID: 0}
+  - text: "Suddenly, Moby Dick turned. His jaws flashed in the water, and, in a violent
+      instant, he attacked Ahab\u2019s boat, biting into it and snapping it in two.
+      Ahab was thrown into the sea, and as he struggled to stay afloat, the whale
+      circled back, its massive form looming ominously. The crew\u2019s rescue efforts
+      hesitated, paralyzed by the sight of the enraged creature."
+    voiceClip: {fileID: 0}
+  - text: "The Pequod approached in time, forcing Moby Dick to abandon his assault,
+      though the whale remained close, a dark, haunting presence. Pulled aboard Stubb\u2019s
+      boat, Ahab lay exhausted, his body broken but his resolve unshaken. He rose
+      with renewed intensity, rallying his men to continue the pursuit."
+    voiceClip: {fileID: 0}
+  - text: As darkness fell, Ahab paced the deck, eyeing the sea and the doubloon
+      nailed to the mast. He vowed to leave the gold until Moby Dick was defeated,
+      inspiring the crew with the promise of reward. As night deepened, he stood
+      watchful, his figure a shadow of relentless obsession against the dark sea,
+      waiting for dawn and the next encounter with his fate.
+    voiceClip: {fileID: 0}

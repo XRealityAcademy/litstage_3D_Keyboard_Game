@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A3_5_TheSermon_FatherMapple
+  m_EditorClassIdentifier: 
+  dialogueId: fathermapple_sermon
+  dialogueLines:
+  - text: 'Woe to him who seeks to pour oil upon the waters when God has brewed them
+      into a gale! '
+    voiceClip: {fileID: 0}
+  - text: Woe to him who seeks to please rather than to appal!
+    voiceClip: {fileID: 0}
+  - text: 'Woe to him whose good name is more to him than goodness! '
+    voiceClip: {fileID: 0}

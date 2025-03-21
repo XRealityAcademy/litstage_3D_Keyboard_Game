@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a92d614faaa241759c695c503476f44, type: 3}
+  m_Name: A8_MobyDick
+  m_EditorClassIdentifier: 
+  sceneName: A8_MobyDick
+  characters:
+  - characterName: ishmael
+    dialogueHandler:
+      dialogueReferences:
+      - {fileID: 11400000, guid: 4ae752080edd54dc4804bc8482650abe, type: 2}
+  - characterName: narrator
+    dialogueHandler:
+      dialogueReferences:
+      - {fileID: 11400000, guid: e9bb804507b094149a003f74b487ac0a, type: 2}
+      - {fileID: 11400000, guid: 2bc8733b489174893ad169bc0f54d4b8, type: 2}
+      - {fileID: 11400000, guid: 84eab148e07984d6a8358f95ee9b315c, type: 2}
+  - characterName: starbuck
+    dialogueHandler:
+      dialogueReferences:
+      - {fileID: 11400000, guid: 7d3e39a5f019c45fe84d3547b2894867, type: 2}
+      - {fileID: 11400000, guid: c0c0679849e3f47c3bb7a53ebfcbfe17, type: 2}
+      - {fileID: 11400000, guid: 09b254b722ba342bda3362ef06b23a46, type: 2}

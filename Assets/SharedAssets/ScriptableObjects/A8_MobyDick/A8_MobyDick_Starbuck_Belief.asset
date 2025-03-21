@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A8_MobyDick_Starbuck_Belief
+  m_EditorClassIdentifier: 
+  dialogueId: starbuck_not_ordinary
+  dialogueLines:
+  - text: '"I''ve not seen him myself, but I''ve heard enough to believe he''s no
+      ordinary whale. The accounts are many, and while some may be embellished, there''s
+      a kernel of truth that cannot be ignored."'
+    voiceClip: {fileID: 0}

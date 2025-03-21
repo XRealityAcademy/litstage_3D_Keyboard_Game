@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c593e519f314f768c8ad296bc0e6d1, type: 3}
+  m_Name: A2_TheSpouterInn_Queequeg_Threat
+  m_EditorClassIdentifier: 
+  dialogueId: queequeg_threat
+  dialogueLines:
+  - text: "\"Who-e debel you?\"\u2014he at last said\u2014\"you no speak-e, dam-me,
+      I kill-e.\""
+    voiceClip: {fileID: 0}
