@@ -49,7 +49,7 @@ public class TriggerZone : MonoBehaviour
 
             if (effectManager != null)
             {
-                Debug.LogError("🔻 DisableEffects effectManager ");
+//                Debug.LogError("🔻 DisableEffects effectManager ");
                 effectManager.DisableEffects();
             }
             else
@@ -79,7 +79,7 @@ public class TriggerZone : MonoBehaviour
         }
         else
         {
-            Debug.LogError($"❌ activationEvent is EMPTY for {gameObject.name}! It won't become visible.");
+//            Debug.LogError($"❌ activationEvent is EMPTY for {gameObject.name}! It won't become visible.");
         }
     }
 
