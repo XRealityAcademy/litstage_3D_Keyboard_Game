@@ -20,9 +20,9 @@ MonoBehaviour:
       others, it hinted at something both pure and terrifying. In the mess hall,
       sailors debated the significance of this ghostly hue, some seeing it as an
       omen, others dismissing it as superstition."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: b2730da5cf91b425b97402a7a175e8c2, type: 3}
   - text: "Even Ahab couldn\u2019t escape its symbolic weight, calling it a mocking
       fa\xE7ade concealing malice. As the Pequod ventured south, I reflected that
       the whale\u2019s whiteness seemed to mirror our deepest fears\u2014a void and
       a mystery that terrified us as much as the creature itself."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 1eef3e9789a884ba2a80d40596c14d18, type: 3}

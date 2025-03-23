@@ -18,11 +18,11 @@ MonoBehaviour:
       fiery gaze. Holding up a gold doubloon, he promised it to the first man to
       sight the white whale, Moby Dick. The crew murmured with excitement and dread,
       their eyes fixed on the coin Ahab hammered to the mast as a symbol of his obsession.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 6fe1a74cc5b014792be7536e985168a5, type: 3}
   - text: Starbuck voiced caution, warning against vengeance, but Ahab dismissed
       him, determined to hunt Moby Dick to the ends of the earth. The crew, drawn
       by the allure of gold and the thrill of the chase, swore an oath with raised
       cups and hands. As night fell, Ahab, alone at the prow, whispered to the sea,
       feeling his fate entwined with the great whale as the Pequod sailed into the
       unknown.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: c9bbdcad8f3ff498790a2acac633d765, type: 3}

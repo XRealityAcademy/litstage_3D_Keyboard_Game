@@ -17,4 +17,4 @@ MonoBehaviour:
   - text: Look up at it; mark it well; the white flame but lights the way to the
       White Whale! Hand me those mainmast links there; I would fain feel this pulse,
       and let mine beat against it; blood against fire! So.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 551f0bf7a1e3d4932af5bf54796c73c5, type: 3}

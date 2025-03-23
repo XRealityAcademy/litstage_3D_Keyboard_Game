@@ -16,4 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - text: "Near the Spouter-Inn, a modest chapel caught my eye\u2014the Whaleman's
       Chapel, a quiet refuge for those who faced the sea's dangers."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: f3168a86748424e5bab6d2e6946e8d1f, type: 3}

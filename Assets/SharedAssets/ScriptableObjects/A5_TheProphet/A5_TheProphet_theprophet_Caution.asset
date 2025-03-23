@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueId: theprophet_caution
   dialogueLines:
-  - text: "\"Ahab\u2019s got a purpose beyond hunting whales. Keep your eyes open;
-      not everything on that ship is as it seems.\" "
-    voiceClip: {fileID: 0}
+  - text: "Ahab\u2019s got a purpose beyond hunting whales. Keep your eyes open;
+      not everything on that ship is as it seems."
+    voiceClip: {fileID: 8300000, guid: 7199ef8187ba14f549347ebb4ceb9499, type: 3}

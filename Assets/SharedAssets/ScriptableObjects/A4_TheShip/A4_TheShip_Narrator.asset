@@ -17,13 +17,13 @@ MonoBehaviour:
   - text: "The next morning dawned crisp and clear as Queequeg and I made our way
       to the docks, where the Pequod awaited\u2014a vessel as storied as it was formidable.
       Her weathered hull and fierce figurehead hinted at countless voyages. "
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 730b474dec6b64339aa4f51d844ad942, type: 3}
   - text: "On deck, we met Captains Peleg and Bildad, whose contrasting personalities
       reflected the dual spirit of whaling. Peleg greeted us heartily, while Bildad
       warned of the sea\u2019s trials. After declaring our intent to join, we negotiated
       terms in the cabin, striking a fair deal. "
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 682378c494383437bbb4e9570dc0ed1a, type: 3}
   - text: "Before we left, Peleg mentioned Captain Ahab\u2014a \u201Csingular man\u201D
       with a mysterious purpose. As we walked away, he reminded us to be aboard by
       dawn, ready to sail with the morning tide."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: e1b410105aaa440759eb9e44bb5a35c7, type: 3}

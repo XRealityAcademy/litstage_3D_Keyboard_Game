@@ -19,10 +19,10 @@ MonoBehaviour:
       whaling ships at the wharves ignites my desire for adventure and a deeper connection
       with nature, compelling me to join a whaling voyage not for profit but to cleanse
       my soul alongside seasoned sailors.
-    voiceClip: {fileID: 8300000, guid: 9e6ebe083e10040e9bd47e9a7c59ad02, type: 3}
+    voiceClip: {fileID: 8300000, guid: c34446eade0484d879e46d8a5a5d7656, type: 3}
   - text: As night falls, I navigate the narrow streets in search of lodging, encountering
       a weathered inn that promises rest and the start of an epic journey. Unbeknownst
       to me, this seemingly ordinary place is the beginning of a transformative quest
       that will test my courage, forge camaraderie, and confront the formidable forces
       of the sea.
-    voiceClip: {fileID: 8300000, guid: fc5792883ac964d60a11dd9638b255f5, type: 3}
+    voiceClip: {fileID: 8300000, guid: fbb8de35b6f17470e9108a12f2f20077, type: 3}

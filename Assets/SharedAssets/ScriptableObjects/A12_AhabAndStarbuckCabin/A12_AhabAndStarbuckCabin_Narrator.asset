@@ -19,14 +19,14 @@ MonoBehaviour:
       When Starbuck suggests they stop to repair the leak, Ahab refuses, prioritizing
       their pursuit over the valuable cargo. A tense confrontation ensues when Starbuck
       challenges Ahab's decision, leading Ahab to threaten him with a musket.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: c19b4b7270c644ee2b90a684edcf2ce1, type: 3}
   - text: The exchange reveals the deep conflict between Starbuck's practical concerns
       and Ahab's obsessive mission. When Starbuck warns ""let Ahab beware of Ahab,""
       it momentarily gives the captain pause.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 99adb0f37af354e4f9c45368b565a05a, type: 3}
   - text: Ultimately, Ahab reconsiders his position and orders the crew to hoist
       the Burtons and address the leak, though whether from honest reflection or
       strategic management of his chief officer remains unclear. This scene highlights
       the complex power dynamics aboard the Pequod and Ahab's internal struggle between
       duty and obsession.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 113f9a8319ba3495bb485a8aa5a4f1ff, type: 3}

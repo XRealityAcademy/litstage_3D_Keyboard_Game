@@ -16,7 +16,7 @@ MonoBehaviour:
   dialogueLines:
   - text: It was during the more pleasant weather, that in due rotation with the
       other seamen, my first mast-head came round.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: cf98a8dd7aa854534b99ade7bf958b37, type: 3}
   - text: In most American whalemen the mast-heads are manned almost simultaneously
       with the vessels leaving the port.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 6331e558569064a538fb19e17ef9af6f, type: 3}

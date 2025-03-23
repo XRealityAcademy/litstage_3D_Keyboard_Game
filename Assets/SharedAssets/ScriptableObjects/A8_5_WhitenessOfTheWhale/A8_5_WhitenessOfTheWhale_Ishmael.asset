@@ -15,8 +15,8 @@ MonoBehaviour:
   dialogueId: ishmael_whale_whiteness
   dialogueLines:
   - text: It was the whiteness of the whale that above all things appalled me.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 5e76ea72108a8415da69ef8130f6cb6c, type: 3}
   - text: There yet lurks an elusive something in the innermost idea of this hue,
       which strikes more of panic to the soul than that redness which affrights in
       blood.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 5a40d946a00a649eba2a0da157db6f76, type: 3}

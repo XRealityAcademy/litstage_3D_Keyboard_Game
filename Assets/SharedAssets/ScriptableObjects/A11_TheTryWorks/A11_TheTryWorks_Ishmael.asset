@@ -16,4 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - text: The try-works are a kind of an open fireplace, or furnace; piled up with
       huge clumps of the blackest knobbiest coal.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: d85a9ca7256d34a9b98723055fcac291, type: 3}

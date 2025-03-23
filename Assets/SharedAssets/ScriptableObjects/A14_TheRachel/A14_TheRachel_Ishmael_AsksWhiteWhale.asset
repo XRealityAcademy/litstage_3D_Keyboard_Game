@@ -15,4 +15,4 @@ MonoBehaviour:
   dialogueId: ishmael_asked_about_whale
   dialogueLines:
   - text: "asked the Rachel\u2019s captain."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 205ff0ea972024822bf22dd70972724e, type: 3}

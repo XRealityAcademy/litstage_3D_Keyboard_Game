@@ -15,4 +15,4 @@ MonoBehaviour:
   dialogueId: ahab_old_thunder
   dialogueLines:
   - text: Old Thunder!
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: d5d32f889b5b041c5afaed7479dd6a3b, type: 3}

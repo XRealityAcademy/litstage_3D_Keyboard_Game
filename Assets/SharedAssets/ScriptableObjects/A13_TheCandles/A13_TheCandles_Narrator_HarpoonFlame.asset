@@ -17,6 +17,6 @@ MonoBehaviour:
   - text: 'Ahab''s harpoon, forged in Perth''s fire, stayed fast in its holder, jutting
       from the whale-boat''s bow, its leather sheath gone and pale flames flickering
       from its steel barb. '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: f88d6cbb3e8414a70bb65d77b5802213, type: 3}
   - text: As the harpoon burned silently, Starbuck grasped Ahab's arm.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 56b8bac8fb4ac43cbb53caaac5d8d136, type: 3}

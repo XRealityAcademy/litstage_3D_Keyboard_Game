@@ -16,7 +16,7 @@ MonoBehaviour:
   dialogueLines:
   - text: Brit is the minute, yellow substance, upon which the Right Whale largely
       feeds.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 9d6c3c142c63748c0889ff67312d258b, type: 3}
   - text: "To have one\u2019s hands among the Brit, to feel the brimming sea lollingly
       rolling around the slight, scattered heaps."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: d512985cc4477422e9ac9a25e159d1b3, type: 3}

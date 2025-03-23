@@ -5004,10 +5004,12 @@ MonoBehaviour:
   triggerOnlyOnce: 1
   effectManager: {fileID: 1154446548}
   triggerSound: {fileID: 0}
-  eventToTrigger: 
+  eventToTrigger: eventToActivateDialog
+  eventToTriggerInmediately: 
   eventObject: {fileID: 0}
-  startsHidden: 1
+  startsHidden: 0
   activationEvent: 
+  nextSceneName: 
 --- !u!33 &254113185
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5115,11 +5117,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 254113182}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01ba3f5296d894558a99a0ffb3a657e7, type: 3}
+  m_Script: {fileID: 11500000, guid: a4dde61432ac04a4eafbfe98365e18ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogContainer: {fileID: 3342258714396641215}
-  triggerOnlyOnce: 1
+  eventID: TriggerZone_Ishmael
+  dependsOnEventID: 
 --- !u!1 &258902543
 GameObject:
   m_ObjectHideFlags: 0
@@ -5345,9 +5347,11 @@ MonoBehaviour:
   effectManager: {fileID: 0}
   triggerSound: {fileID: 8300000, guid: 067a8e1530929457ba07cb6c522b45f2, type: 3}
   eventToTrigger: 
+  eventToTriggerInmediately: 
   eventObject: {fileID: 0}
   startsHidden: 1
   activationEvent: 
+  nextSceneName: 
 --- !u!54 &555739109
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11027,7 +11031,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7826713037005567761}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogInteraction, Assembly-CSharp
         m_MethodName: OnNPCIconClick
         m_Mode: 1
@@ -11836,11 +11840,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerOnlyOnce: 0
   effectManager: {fileID: 3801377344157410027}
-  triggerSound: {fileID: 8300000, guid: 067a8e1530929457ba07cb6c522b45f2, type: 3}
+  triggerSound: {fileID: 8300000, guid: fd08dcaa325f447c088f2988ffdf6fff, type: 3}
   eventToTrigger: 
+  eventToTriggerInmediately: 
   eventObject: {fileID: 0}
-  startsHidden: 1
+  startsHidden: 0
   activationEvent: 
+  nextSceneName: 
 --- !u!1 &1701283824210509823
 GameObject:
   m_ObjectHideFlags: 0
@@ -17642,8 +17648,8 @@ GameObject:
   - component: {fileID: 1689622794596715903}
   - component: {fileID: 8988767851262049773}
   - component: {fileID: 186147537943765787}
-  - component: {fileID: 7826713037005567761}
   - component: {fileID: 5170132703681099301}
+  - component: {fileID: 8988767851262049774}
   m_Layer: 3
   m_Name: FloatingDialog
   m_TagString: Untagged
@@ -17714,7 +17720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogUI: {fileID: 3067408495418354480}
-  eventToListen: 
+  eventToListen: eventToActivateDialog
 --- !u!1 &3399816724489408082
 GameObject:
   m_ObjectHideFlags: 0
@@ -18036,9 +18042,11 @@ MonoBehaviour:
   effectManager: {fileID: 0}
   triggerSound: {fileID: 8300000, guid: 067a8e1530929457ba07cb6c522b45f2, type: 3}
   eventToTrigger: 
+  eventToTriggerInmediately: 
   eventObject: {fileID: 0}
   startsHidden: 1
   activationEvent: 
+  nextSceneName: 
 --- !u!33 &3744302371084624593
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -23430,7 +23438,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7826713037005567761}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogInteraction, Assembly-CSharp
         m_MethodName: CloseDialog
         m_Mode: 1
@@ -23456,11 +23464,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerOnlyOnce: 1
   effectManager: {fileID: 1211846018047697159}
-  triggerSound: {fileID: 8300000, guid: 7a4e4dcb8e6c34ed69f0a54de6195047, type: 3}
+  triggerSound: {fileID: 8300000, guid: fd08dcaa325f447c088f2988ffdf6fff, type: 3}
   eventToTrigger: 
+  eventToTriggerInmediately: 
   eventObject: {fileID: 0}
-  startsHidden: 1
+  startsHidden: 0
   activationEvent: 
+  nextSceneName: 
 --- !u!54 &4449417577771104652
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23502,11 +23512,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerOnlyOnce: 0
   effectManager: {fileID: 5333156719374611823}
-  triggerSound: {fileID: 8300000, guid: 65f9e2c02a4cd44f5ac575026a9cbfe6, type: 3}
+  triggerSound: {fileID: 8300000, guid: fd08dcaa325f447c088f2988ffdf6fff, type: 3}
   eventToTrigger: 
+  eventToTriggerInmediately: 
   eventObject: {fileID: 0}
   startsHidden: 0
   activationEvent: 
+  nextSceneName: 
 --- !u!114 &4543346243329265223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24855,9 +24867,11 @@ MonoBehaviour:
   effectManager: {fileID: 6367000692345518847}
   triggerSound: {fileID: 8300000, guid: 44e2e1ed3895c4a2ca33bece12979fb5, type: 3}
   eventToTrigger: 
+  eventToTriggerInmediately: 
   eventObject: {fileID: 0}
-  startsHidden: 1
+  startsHidden: 0
   activationEvent: 
+  nextSceneName: 
 --- !u!81 &6347440155792234760
 AudioListener:
   m_ObjectHideFlags: 0
@@ -25690,9 +25704,11 @@ MonoBehaviour:
   effectManager: {fileID: 0}
   triggerSound: {fileID: 8300000, guid: 067a8e1530929457ba07cb6c522b45f2, type: 3}
   eventToTrigger: 
+  eventToTriggerInmediately: 
   eventObject: {fileID: 0}
   startsHidden: 1
   activationEvent: 
+  nextSceneName: 
 --- !u!1 &7720449662799417582
 GameObject:
   m_ObjectHideFlags: 0
@@ -25819,9 +25835,11 @@ MonoBehaviour:
   effectManager: {fileID: 0}
   triggerSound: {fileID: 8300000, guid: 067a8e1530929457ba07cb6c522b45f2, type: 3}
   eventToTrigger: 
+  eventToTriggerInmediately: 
   eventObject: {fileID: 0}
   startsHidden: 1
   activationEvent: 
+  nextSceneName: 
 --- !u!136 &7794194456710220793
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -25860,29 +25878,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2347247681945216908}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7826713037005567761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3067408495418354480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4beb2e63a0d2a47cd9f2186f02fb2c45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npcSpeechBubble: {fileID: 6390614231706052902}
-  npcText: {fileID: 6190739642113578230}
-  dialogCloseButton: {fileID: 4407162198999932817}
-  npcNameplate: {fileID: 8788805333826510368}
-  floatingDialog: {fileID: 2232401489870269180}
-  headPositionAnchor: {fileID: 1882904674616485438}
-  DialogTriggerButtonCenter: {fileID: 9153818791909769539}
-  DialogTriggerButtonCorner: {fileID: 2193634264258570387}
-  canRepeatDialog: 1
-  npcData: {fileID: 11400000, guid: 8ce0e033b9c674b878eec7a8f9d70661, type: 2}
-  eventToTriggerOnClose: 
 --- !u!65 &7860287671974283513
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26384,9 +26379,11 @@ MonoBehaviour:
   effectManager: {fileID: 0}
   triggerSound: {fileID: 8300000, guid: 067a8e1530929457ba07cb6c522b45f2, type: 3}
   eventToTrigger: 
+  eventToTriggerInmediately: 
   eventObject: {fileID: 0}
   startsHidden: 1
   activationEvent: 
+  nextSceneName: 
 --- !u!222 &8554688264124227503
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31424,7 +31421,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7826713037005567761}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogInteraction, Assembly-CSharp
         m_MethodName: OnNPCIconClick
         m_Mode: 1
@@ -31592,6 +31589,32 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8988767851262049774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3067408495418354480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71978852764074cc695334d63a6f12be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcSpeechBubble: {fileID: 6390614231706052902}
+  npcText: {fileID: 6190739642113578230}
+  dialogCloseButton: {fileID: 4407162198999932817}
+  npcNameplate: {fileID: 8788805333826510368}
+  floatingDialog: {fileID: 2232401489870269180}
+  headPositionAnchor: {fileID: 1882904674616485438}
+  DialogTriggerButtonCenter: {fileID: 9153818791909769539}
+  DialogTriggerButtonCorner: {fileID: 2193634264258570387}
+  canRepeatDialog: 1
+  sceneData: {fileID: 11400000, guid: 0beba9d9316ed478db6de6f1c36ceab5, type: 2}
+  characterName: ishmael
+  dialogueId: intro
+  eventToTriggerOnClose: 
+  activationEvent: 
 --- !u!1 &8992578530134969720
 GameObject:
   m_ObjectHideFlags: 0
@@ -31816,8 +31839,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 1363267610}
   - {fileID: 6914217793462786058}
-  - {fileID: 6911104472670321694}
-  - {fileID: 2225123878298771549}
+  - {fileID: 1154446549}
   - {fileID: 2549634454096946500}
   - {fileID: 4377793600453304637}
-  - {fileID: 1154446549}
+  - {fileID: 2225123878298771549}
+  - {fileID: 6911104472670321694}

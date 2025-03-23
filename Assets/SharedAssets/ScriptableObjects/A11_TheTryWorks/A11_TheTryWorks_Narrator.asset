@@ -18,9 +18,9 @@ MonoBehaviour:
       a solid brick structure used to render whale oil, adding both weight and unique
       appearance to the vessel. Positioned between masts, this masonry holds iron
       pots for boiling blubber, making the ship resemble a floating forge. '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 580b13ab968e6451e9931f6b0aba74a1, type: 3}
   - text: "Working with blubber, the harpooneers maintain intense fires, creating
       eerie, smoke-filled scenes. For sailors, staring into these flames too long
       stirs visions, madness, and, occasionally, insights about the world\u2019s
       darker, unexplored places\u2014hinting at the haunting depths of human existence."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: b4a133e3cbe094d6d9c213a270f69a44, type: 3}

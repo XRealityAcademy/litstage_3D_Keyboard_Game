@@ -19,11 +19,11 @@ MonoBehaviour:
       the leviathan had circled the seafaring world, each account more fantastical
       than the last. Some spoke of him as a ghostly apparition, a specter of the
       deep; others swore he was an incarnation of the very sea's wrath."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: a6fdd2992696e4f96a0655feda363270, type: 3}
   - text: One afternoon, as the ship sliced through calm waters, I sought out Starbuck.
       The first mate stood at the helm, his gaze fixed on the horizon.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 669ecde4e7835445aafee2a04475f038, type: 3}
   - text: '"Mr. Starbuck," I began tentatively, "may I ask you about Moby Dick?"'
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 5ddd1c6b41ecb428aa480fcc5ac41360, type: 3}
   - text: 'Starbuck turned, his eyes reflective. '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 27f5cec03d001489ebcf96c5df6c0ec4, type: 3}

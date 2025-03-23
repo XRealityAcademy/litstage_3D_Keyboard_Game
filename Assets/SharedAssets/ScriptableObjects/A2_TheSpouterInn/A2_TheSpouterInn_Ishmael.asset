@@ -15,11 +15,11 @@ MonoBehaviour:
   dialogueId: ishmael_intro
   dialogueLines:
   - text: "It was a queer sort of place\u2014a gable-ended old house,"
-    voiceClip: {fileID: 8300000, guid: 402a5a1e218eb4735a68ffcb1691fa50, type: 3}
+    voiceClip: {fileID: 8300000, guid: 9a5488031ee414d1cbe9f610844e52f4, type: 3}
   - text: one side palsied as it were, and leaning over sadly.
-    voiceClip: {fileID: 8300000, guid: 86e47b9f4b2ca4e8dbf108c9db8b7da9, type: 3}
+    voiceClip: {fileID: 8300000, guid: cd8960e797b1d4544a7c13a469111013, type: 3}
   - text: It stood on a sharp bleak corner, where that tempestuous wind Euroclydon
-    voiceClip: {fileID: 8300000, guid: 6fee672e2f04643c18774c1eb5a4a35f, type: 3}
+    voiceClip: {fileID: 8300000, guid: 3ee6d99f7f9764572a0764094a98c861, type: 3}
   - text: "kept up a worse howling than ever it did about poor Paul\u2019s tossed
       craft."
-    voiceClip: {fileID: 8300000, guid: ff3bd0daadb0a419b91fba310d6049c2, type: 3}
+    voiceClip: {fileID: 8300000, guid: d1410bd8afcbc4e9d893ff6c0a030fd0, type: 3}

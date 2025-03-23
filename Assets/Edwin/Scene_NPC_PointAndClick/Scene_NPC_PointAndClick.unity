@@ -690,28 +690,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7064191974039058456}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &506978991386469762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 760663329205061825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4beb2e63a0d2a47cd9f2186f02fb2c45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npcSpeechBubble: {fileID: 2196011001172548675}
-  npcText: {fileID: 3799607606504193058}
-  dialogCloseButton: {fileID: 1301187827995001143}
-  npcNameplate: {fileID: 5712601908652808473}
-  floatingDialog: {fileID: 6853926193400906560}
-  headPositionAnchor: {fileID: 5380265421075239139}
-  DialogTriggerButtonCenter: {fileID: 8844196952692733599}
-  DialogTriggerButtonCorner: {fileID: 1084038371118538407}
-  canRepeatDialog: 1
-  npcData: {fileID: 11400000, guid: 8ce0e033b9c674b878eec7a8f9d70661, type: 2}
 --- !u!4 &543450652494988972
 Transform:
   m_ObjectHideFlags: 0
@@ -811,8 +789,8 @@ GameObject:
   - component: {fileID: 226400339072442070}
   - component: {fileID: 6083277519509487097}
   - component: {fileID: 1526759174851324900}
-  - component: {fileID: 506978991386469762}
   - component: {fileID: 2770828021604733725}
+  - component: {fileID: 6853926193400906561}
   m_Layer: 5
   m_Name: FloatingDialog
   m_TagString: Untagged
@@ -1215,7 +1193,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5079325925388275804}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogInteraction, Assembly-CSharp
         m_MethodName: OnNPCIconClick
         m_Mode: 1
@@ -1326,7 +1304,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 506978991386469762}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogInteraction, Assembly-CSharp
         m_MethodName: CloseDialog
         m_Mode: 1
@@ -2215,7 +2193,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 506978991386469762}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogInteraction, Assembly-CSharp
         m_MethodName: OnNPCIconClick
         m_Mode: 1
@@ -3499,28 +3477,6 @@ Transform:
   - {fileID: 761954732}
   m_Father: {fileID: 5656952876932980236}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5079325925388275804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5474734428761718047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4beb2e63a0d2a47cd9f2186f02fb2c45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npcSpeechBubble: {fileID: 6849287764184344989}
-  npcText: {fileID: 8488907395443165692}
-  dialogCloseButton: {fileID: 6015399390463276265}
-  npcNameplate: {fileID: 1023301845103570119}
-  floatingDialog: {fileID: 2191646903722473118}
-  headPositionAnchor: {fileID: 855341248517481789}
-  DialogTriggerButtonCenter: {fileID: 4307874417696424769}
-  DialogTriggerButtonCorner: {fileID: 5656245806764108665}
-  canRepeatDialog: 1
-  npcData: {fileID: 11400000, guid: 792e967d1ee0b41438015ebdc583a8bc, type: 2}
 --- !u!224 &5095463221244085062
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3659,8 +3615,8 @@ GameObject:
   - component: {fileID: 4778344874593135368}
   - component: {fileID: 1520077144940939303}
   - component: {fileID: 6072085748038409786}
-  - component: {fileID: 5079325925388275804}
   - component: {fileID: 7424104648319739587}
+  - component: {fileID: 7424104648319739588}
   m_Layer: 5
   m_Name: FloatingDialog
   m_TagString: Untagged
@@ -3966,7 +3922,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 506978991386469762}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogInteraction, Assembly-CSharp
         m_MethodName: OnNPCIconClick
         m_Mode: 1
@@ -4229,7 +4185,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5079325925388275804}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogInteraction, Assembly-CSharp
         m_MethodName: CloseDialog
         m_Mode: 1
@@ -4737,6 +4693,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0.06, y: 4.08}
   m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6853926193400906561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760663329205061825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71978852764074cc695334d63a6f12be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcSpeechBubble: {fileID: 2196011001172548675}
+  npcText: {fileID: 3799607606504193058}
+  dialogCloseButton: {fileID: 1301187827995001143}
+  npcNameplate: {fileID: 5712601908652808473}
+  floatingDialog: {fileID: 6853926193400906560}
+  headPositionAnchor: {fileID: 5380265421075239139}
+  DialogTriggerButtonCenter: {fileID: 8844196952692733599}
+  DialogTriggerButtonCorner: {fileID: 1084038371118538407}
+  canRepeatDialog: 1
+  sceneData: {fileID: 11400000, guid: 0beba9d9316ed478db6de6f1c36ceab5, type: 2}
+  characterName: narrator
+  dialogueId: intro
+  eventToTriggerOnClose: 
+  activationEvent: 
 --- !u!224 &6940041581066826023
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4962,7 +4944,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5079325925388275804}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogInteraction, Assembly-CSharp
         m_MethodName: OnNPCIconClick
         m_Mode: 1
@@ -5022,6 +5004,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a748cdfe365240bb93b288c3e450268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7424104648319739588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5474734428761718047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71978852764074cc695334d63a6f12be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcSpeechBubble: {fileID: 6849287764184344989}
+  npcText: {fileID: 8488907395443165692}
+  dialogCloseButton: {fileID: 6015399390463276265}
+  npcNameplate: {fileID: 1023301845103570119}
+  floatingDialog: {fileID: 2191646903722473118}
+  headPositionAnchor: {fileID: 855341248517481789}
+  DialogTriggerButtonCenter: {fileID: 4307874417696424769}
+  DialogTriggerButtonCorner: {fileID: 5656245806764108665}
+  canRepeatDialog: 1
+  sceneData: {fileID: 11400000, guid: 0beba9d9316ed478db6de6f1c36ceab5, type: 2}
+  characterName: ishmael
+  dialogueId: intro
+  eventToTriggerOnClose: 
+  activationEvent: 
 --- !u!1 &7442015437649945123
 GameObject:
   m_ObjectHideFlags: 0

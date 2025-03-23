@@ -17,4 +17,4 @@ MonoBehaviour:
   - text: 'Hearing Starbuck, the frightened crew rushed to the braces, half-mutinous.
       But Ahab, seizing the blazing harpoon, brandished it fiercely, swearing to
       strike down any sailor who moved. The men shrank back, and Ahab declared, '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: df0e928249ce3450b9dbc0cf144f4619, type: 3}

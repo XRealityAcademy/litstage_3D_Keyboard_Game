@@ -16,4 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - text: It was a sight full of quick wonder and awe! The vast swells of the omnipotent
       sea; the surging, hollow roar they made, as they rolled along the eight gunwales.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 05b8f7e64c41942a786c5ec439a7466b, type: 3}

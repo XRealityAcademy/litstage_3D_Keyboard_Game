@@ -16,4 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - text: "Our oath to hunt the White Whale binds us all. Look here\u2014thus I blow
       out the last fear!"
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 85e41f278d4b640dc847ec079ece80fb, type: 3}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueId: starbuck_not_ordinary
   dialogueLines:
-  - text: '"I''ve not seen him myself, but I''ve heard enough to believe he''s no
-      ordinary whale. The accounts are many, and while some may be embellished, there''s
-      a kernel of truth that cannot be ignored."'
-    voiceClip: {fileID: 0}
+  - text: I've not seen him myself, but I've heard enough to believe he's no ordinary
+      whale. The accounts are many, and while some may be embellished, there's a
+      kernel of truth that cannot be ignored.
+    voiceClip: {fileID: 8300000, guid: 7e484a4a003eb4ba6ad926c9ddb7a49c, type: 3}

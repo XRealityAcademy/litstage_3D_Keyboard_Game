@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueId: ahab_whale_question
   dialogueLines:
-  - text: '"What do ye do when ye see a whale, men?"'
-    voiceClip: {fileID: 0}
+  - text: What do ye do when ye see a whale, men?
+    voiceClip: {fileID: 8300000, guid: 66b75dbf3a7af4bd8807704b0007ea4f, type: 3}

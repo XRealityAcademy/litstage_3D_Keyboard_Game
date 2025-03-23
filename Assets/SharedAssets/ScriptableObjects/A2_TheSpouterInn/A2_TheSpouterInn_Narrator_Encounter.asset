@@ -19,8 +19,8 @@ MonoBehaviour:
       of anticipation, the wooden boards groaning underfoot like the timbers of a
       ship in a swell. The corridor is dimly lit by a solitary candle, casting flickering
       shadows that dance upon the walls.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 452311f5f67c8423089aa591f8566bf2, type: 3}
   - text: "I thought about slipping out the window, but being on the second floor
       held me back. I\u2019m no coward, but I couldn\u2019t make sense of this head-peddling,
       tattooed stranger, and my confusion turned to fear. "
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: cb9376d79c5d04d058858e9fe2bdec1e, type: 3}

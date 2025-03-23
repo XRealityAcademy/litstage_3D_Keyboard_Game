@@ -15,4 +15,4 @@ MonoBehaviour:
   dialogueId: gardiner_save_my_child
   dialogueLines:
   - text: You must save my child!
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: b63fa47bf04664f22b94b003c4df68e9, type: 3}

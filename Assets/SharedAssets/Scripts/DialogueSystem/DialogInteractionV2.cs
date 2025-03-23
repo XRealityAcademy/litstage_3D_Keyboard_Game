@@ -339,7 +339,7 @@ public class DialogInteractionV2 : MonoBehaviour
         }
         else
         {
-            Debug.LogError("❌ eventToTriggerOnClose is EMPTY! Cannot trigger event.");
+            //Debug.LogError("❌ eventToTriggerOnClose is EMPTY! Cannot trigger event.");
         }
 
     }

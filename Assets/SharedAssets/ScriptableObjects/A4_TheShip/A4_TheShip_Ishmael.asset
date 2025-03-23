@@ -16,6 +16,6 @@ MonoBehaviour:
   dialogueLines:
   - text: As I walked down the wide, wooden way of the Battery, where I had lingered
       under the lee of the watertanks,
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: ff9b3f741858d4555b8d941fa9f065d8, type: 3}
   - text: I gazed out to sea.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 22f8acf32da794e159c4173dc0f9cbed, type: 3}

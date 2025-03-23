@@ -16,4 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - text: With that, he walked away, leaving us with an uneasy feeling. Queequeg
       murmured,
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 30f44a4d7745b46b9b6344df864bfe4a, type: 3}

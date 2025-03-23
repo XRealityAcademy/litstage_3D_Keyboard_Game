@@ -18,16 +18,16 @@ MonoBehaviour:
       the act imbued with symbolic significance. His countenance was solemn yet compassionate,
       eyes surveying the congregation with a depth of understanding that seemed to
       penetrate to the very soul.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 7577b17301e314a2591fca4ad89386a8, type: 3}
   - text: "He resumed his discourse on Jonah, delving deeper into the nuances of
       the narrative. His words painted vivid scenes\u2014the storm-tossed ship, the
       casting of lots, the reluctant acceptance of fate as Jonah was hurled into
       the raging sea. Father Mapple expounded upon the themes of divine will and
       human agency, exploring the tension between surrender and defiance."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 015d655b8736f41e1a1324787066884d, type: 3}
   - text: "At the heart of his sermon was the concept of redemption through acknowledgment
       and acceptance of one's path. He spoke of the whale not as a monster but as
       a means of deliverance, a catalyst for transformation. The parallels to the
       lives of whalemen were unmistakable\u2014the pursuit of the formidable leviathan
       mirroring the inner struggles faced by each individual."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 14e23c8968bf346efb6948bc55f6af08, type: 3}

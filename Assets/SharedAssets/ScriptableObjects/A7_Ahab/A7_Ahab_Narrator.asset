@@ -19,11 +19,11 @@ MonoBehaviour:
       he commanded attention with a fierce intensity. Addressing the men, he announced
       their mission: to hunt the legendary white whale, Moby Dick, the beast that
       had taken his leg.'
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 3ad1fe316d4ad402ab523e7cfec7c8a0, type: 3}
   - text: "Ahab promised a gold doubloon to the man who first sighted the whale,
       igniting excitement and unease among the crew. Starbuck voiced caution, fearing
       the perilous path Ahab\u2019s vengeance could bring, but Ahab dismissed him,
       declaring his pursuit of Moby Dick a cosmic battle. With murmurs of awe and
       apprehension, the Pequod sailed onward, its crew bound to Ahab\u2019s relentless
       quest against the sea\u2019s vast, shadowed unknown."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: e85041d89b3d44373907a1f66c56b791, type: 3}
