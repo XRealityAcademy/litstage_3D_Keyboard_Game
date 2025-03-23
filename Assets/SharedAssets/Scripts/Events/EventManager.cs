@@ -45,7 +45,7 @@ public class EventManager : MonoBehaviour
     {
         if (eventDictionary.ContainsKey(eventName))
         {
-            Debug.Log($"🔥 Event Triggered: {eventName}");
+//            Debug.Log($"🔥 Event Triggered: {eventName}");
             eventDictionary[eventName]?.Invoke();
         }
     }

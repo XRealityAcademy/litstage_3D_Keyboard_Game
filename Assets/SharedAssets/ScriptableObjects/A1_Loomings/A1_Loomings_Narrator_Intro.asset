@@ -26,3 +26,5 @@ MonoBehaviour:
       that will test my courage, forge camaraderie, and confront the formidable forces
       of the sea.
     voiceClip: {fileID: 8300000, guid: fbb8de35b6f17470e9108a12f2f20077, type: 3}
+  - text: 
+    voiceClip: {fileID: 0}

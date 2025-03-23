@@ -110,7 +110,7 @@ public class DialogInteractionV2 : MonoBehaviour
         }
 
         npcNameplate.text = characterName;
-        Debug.Log($"✅ Loaded dialogue '{dialogueId}' for '{characterName}'");
+        //Debug.Log($"✅ Loaded dialogue '{dialogueId}' for '{characterName}'");
     }
 
     public void showDialogAutomatically()
@@ -134,7 +134,7 @@ public class DialogInteractionV2 : MonoBehaviour
         if (DialogTriggerButtonCorner != null)
             DialogTriggerButtonCorner.SetActive(false);
 
-        ShowNextDialogLine();
+        ShowNextDialogLineAutomatically();
     }
 
     private void ShowNextDialogLineAutomatically()
@@ -334,7 +334,7 @@ public class DialogInteractionV2 : MonoBehaviour
         // ✅ Fire the event to show the Trigger Zone after closing
         if (!string.IsNullOrEmpty(eventToTriggerOnClose))
         {
-            Debug.Log($"📢 Trying to trigger event: '{eventToTriggerOnClose}'"); // Add Debug
+//            Debug.Log($"📢 Trying to trigger event: '{eventToTriggerOnClose}'"); // Add Debug
             EventManager.TriggerEvent(eventToTriggerOnClose);
         }
         else

@@ -130,15 +130,8 @@ public class LittleCharacterMovement : MonoBehaviour
                 result.gameObject.CompareTag("NPC_Text") ||
                 result.gameObject.CompareTag("NPC_CloseButton")) && Input.GetMouseButtonDown(0))
             {
-                DialogInteraction dialogInteraction = result.gameObject.GetComponentInParent<DialogInteraction>();
                 DialogInteractionV2 dialogInteractionV2 = result.gameObject.GetComponentInParent<DialogInteractionV2>();
-
-                if (dialogInteraction != null)
-                {
-                    dialogInteraction.OnNPCIconClick();
-                    return true;
-                }
-                else if (dialogInteractionV2 != null)
+                if (dialogInteractionV2 != null)
                 {
                     dialogInteractionV2.OnNPCIconClick(); // ✅ Now correctly calls OnNPCIconClick()
                     return true;

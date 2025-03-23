@@ -14,12 +14,12 @@ public class TriggerZoneEffectManager : MonoBehaviour
 
     void Start()
     {
-        UnityEngine.Debug.Log($"🔍 Start() called on {gameObject.name} (Instance ID: {gameObject.GetInstanceID()}) at {Time.time} seconds", this);
+//        UnityEngine.Debug.Log($"🔍 Start() called on {gameObject.name} (Instance ID: {gameObject.GetInstanceID()}) at {Time.time} seconds", this);
 
         // ✅ Check if it's already disabled (prevents overriding DisableEffects())
         if (!effectsActive)
         {
-            UnityEngine.Debug.Log($"🚫 {gameObject.name} was initialized with effects disabled. Skipping Start() activation.");
+//            UnityEngine.Debug.Log($"🚫 {gameObject.name} was initialized with effects disabled. Skipping Start() activation.");
             return; // 🚀 Exit early so it doesn't enable effects again
         }
 
@@ -32,7 +32,7 @@ public class TriggerZoneEffectManager : MonoBehaviour
         if (expandingEffect != null)
         {
             expandingEffect.StartEffect();
-            UnityEngine.Debug.Log($"🌟 Expanding effect STARTED on {gameObject.name}");
+           // UnityEngine.Debug.Log($"🌟 Expanding effect STARTED on {gameObject.name}");
         }
     }
 
@@ -46,7 +46,7 @@ public class TriggerZoneEffectManager : MonoBehaviour
 
         effectsActive = true; // ✅ Set active state before running
 
-        UnityEngine.Debug.Log($"🔥 [{gameObject.name}] Activating Effects...");
+//        UnityEngine.Debug.Log($"🔥 [{gameObject.name}] Activating Effects...");
 
         if (expandingEffect != null && !expandingEffect.gameObject.activeSelf)
         {
@@ -64,13 +64,13 @@ public class TriggerZoneEffectManager : MonoBehaviour
         if (triggerParticles != null && !triggerParticles.isPlaying)
         {
             triggerParticles.Play();
-            UnityEngine.Debug.Log($"💨 Particles PLAYING on {gameObject.name}");
+//            UnityEngine.Debug.Log($"💨 Particles PLAYING on {gameObject.name}");
         }
 
         if (triggerLight != null && !triggerLight.enabled)
         {
             triggerLight.enabled = true;
-            UnityEngine.Debug.Log($"💡 Light TURNED ON on {gameObject.name}");
+//            UnityEngine.Debug.Log($"💡 Light TURNED ON on {gameObject.name}");
         }
     }
 
@@ -84,12 +84,12 @@ public class TriggerZoneEffectManager : MonoBehaviour
 
         effectsActive = false; // ✅ Reset active state
 
-        UnityEngine.Debug.Log($"🔴 [{gameObject.name}] Deactivating All Effects...");
+//        UnityEngine.Debug.Log($"🔴 [{gameObject.name}] Deactivating All Effects...");
 
         if (expandingEffect != null)
         {
             expandingEffect.gameObject.SetActive(false);
-            UnityEngine.Debug.Log($"❌ Expanding effect DISABLED on {gameObject.name}");
+         //   UnityEngine.Debug.Log($"❌ Expanding effect DISABLED on {gameObject.name}");
         }
 
         if (colorEffect != null)
@@ -101,13 +101,13 @@ public class TriggerZoneEffectManager : MonoBehaviour
         if (triggerParticles != null && triggerParticles.isPlaying)
         {
             triggerParticles.Stop();
-            UnityEngine.Debug.Log($"💨 Particles STOPPED on {gameObject.name}");
+//            UnityEngine.Debug.Log($"💨 Particles STOPPED on {gameObject.name}");
         }
 
         if (triggerLight != null && triggerLight.enabled)
         {
             triggerLight.enabled = false;
-            UnityEngine.Debug.Log($"💡 Light TURNED OFF on {gameObject.name}");
+//            UnityEngine.Debug.Log($"💡 Light TURNED OFF on {gameObject.name}");
         }
     }
 

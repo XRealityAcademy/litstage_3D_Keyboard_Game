@@ -31,7 +31,7 @@ public class TriggerZone : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log($"🔻 TriggerZone ({gameObject.name}) listening for event: '{activationEvent}'");
+//        Debug.Log($"🔻 TriggerZone ({gameObject.name}) listening for event: '{activationEvent}'");
 
 
         // Debug.Log("starting triggerZone");
@@ -98,7 +98,7 @@ public class TriggerZone : MonoBehaviour
         if (triggerOnlyOnce && hasTriggered) return;
 
         hasTriggered = true;
-        Debug.Log($"✅ Player entered the trigger zone: {gameObject.name}");
+//        Debug.Log($"✅ Player entered the trigger zone: {gameObject.name}");
 
 
         if (eventObject != null)
@@ -212,7 +212,7 @@ public class TriggerZone : MonoBehaviour
 
     private void ShowTriggerZone() { 
 
-        Debug.Log($"🔓 Trigger Zone activated by event: {activationEvent}");
+//        Debug.Log($"🔓 Trigger Zone activated by event: {activationEvent}");
 
         SetVisible(true); // ✅ Make it visible when event fires
         if (effectManager != null) {
