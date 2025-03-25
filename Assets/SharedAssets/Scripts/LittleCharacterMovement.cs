@@ -28,28 +28,31 @@ public class LittleCharacterMovement : MonoBehaviour
 
     void Update()
     {
-        // ✅ **Step 1: Prevent movement if clicking a UI button**
+        // Prevent movement if clicking a UI button
         if (IsPointerOverUIElement())
         {
             return; // Prevent unintended movement
         }
 
-        // ✅ **Step 2: Cast a Ray to Detect World Objects**
+        // Cast a Ray to Detect World Objects
         ray = cam.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(ray, out hit))
         {
-            // ✅ **Step 3: Detect SpaceElements (Floating Icons, Speech Bubbles)**
+            // Print only when the left mouse button is pressed
+            if (Input.GetMouseButtonDown(0))
+            {
+                Debug.Log("Clicked object: " + hit.collider.gameObject.name);
+            }
+
+            // SpaceElements (Floating Icons, Speech Bubbles)
             if (hit.collider.gameObject.layer == LayerMask.NameToLayer("SpaceElements") && Input.GetMouseButtonDown(0))
             {
                 Debug.Log("🟡 Clicked on a SpaceElement: " + hit.collider.gameObject.name);
-
-                // ✅ Show RedCircle at the clicked position
                 redCircle.transform.position = hit.point;
                 redCircle.SetActive(true);
                 greenCircle.SetActive(false);
 
-                // ✅ Try to display the message
                 SpaceElement spaceElement = hit.collider.GetComponent<SpaceElement>();
                 if (spaceElement != null)
                 {
@@ -59,11 +62,21 @@ public class LittleCharacterMovement : MonoBehaviour
                 {
                     Debug.LogError("❌ SpaceElement NOT found on: " + hit.collider.gameObject.name);
                 }
-
-                return; // ✅ Prevent movement
+                return;
             }
 
-            // ✅ **Step 4: Handle Walkable Area (Ground & TriggerZone)**
+            // Handle Collectible Items
+            if (hit.collider.CompareTag("Collectible") && Input.GetMouseButtonDown(0))
+            {
+                CollectibleItem item = hit.collider.GetComponent<CollectibleItem>();
+                if (item != null)
+                {
+                    item.TryCollect(transform);
+                }
+                return;
+            }
+
+            // Handle Walkable Areas (Ground & TriggerZone)
             if (hit.collider.CompareTag("Ground") || hit.collider.CompareTag("TriggerZone"))
             {
                 greenCircle.transform.position = hit.point;
@@ -83,7 +96,7 @@ public class LittleCharacterMovement : MonoBehaviour
                 greenCircle.SetActive(false);
             }
 
-            // ✅ **Step 5: Handle Obstacles**
+            // Handle Obstacles
             if (hit.collider.CompareTag("Object"))
             {
                 redCircle.transform.position = hit.point;
@@ -96,7 +109,7 @@ public class LittleCharacterMovement : MonoBehaviour
             }
         }
 
-        // ✅ **Step 6: Check if NPC Reached the Destination**
+        // Check if NPC Reached the Destination
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
             if (isTraveling)
