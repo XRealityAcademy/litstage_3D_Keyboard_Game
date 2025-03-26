@@ -15,4 +15,4 @@ MonoBehaviour:
   dialogueId: narrator_elijah_reflection
   dialogueLines:
   - text: I agreed, though his words lingered in my mind.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: cc5f33286fbc24e54801f5d291b8546a, type: 3}

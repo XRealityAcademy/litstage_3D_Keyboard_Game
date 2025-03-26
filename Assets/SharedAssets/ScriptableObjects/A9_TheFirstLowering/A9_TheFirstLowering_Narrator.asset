@@ -19,7 +19,7 @@ MonoBehaviour:
       alongside Fedallah's enigmatic harpooneers. Experiencing his first hunt, I
       joined Queequeg and successfully harpooned a sizable sperm whale, while Ahab
       relentlessly pursued a larger, more formidable creature.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 94f64394ded2f464ebcab242ed6be591, type: 3}
   - text: The chase turned disastrous when Ahab's boat was destroyed by the whale,
       forcing him into the sea where Starbuck reluctantly rescued him. This near-tragedy
       heightened tensions among the crew, casting doubt on Ahab's judgment and deepening
@@ -27,4 +27,4 @@ MonoBehaviour:
       voyage, we sensed being inexorably drawn into Ahab's perilous quest, while
       the vast, indifferent sea concealed the relentless white whale beneath its
       surface
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 31cb39343ee5c40c1af3f884f0c47859, type: 3}

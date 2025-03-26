@@ -16,4 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - text: "With a breath, he extinguished the flame, and as a giant elm in a storm
       draws lightning, so did Ahab\u2019s last words scatter the crew in terror."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: c3edb7edb62634a83bacdf440388725e, type: 3}

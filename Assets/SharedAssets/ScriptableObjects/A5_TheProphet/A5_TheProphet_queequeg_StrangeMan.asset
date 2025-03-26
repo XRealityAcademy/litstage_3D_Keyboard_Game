@@ -15,4 +15,4 @@ MonoBehaviour:
   dialogueId: queequeg_strange_man
   dialogueLines:
   - text: Strange man.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 38394a3bf92dd42edbba941f2e8cb35a, type: 3}

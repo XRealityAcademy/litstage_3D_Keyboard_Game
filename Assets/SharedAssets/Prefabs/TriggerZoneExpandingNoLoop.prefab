@@ -4969,6 +4969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4233807301298918746}
   - component: {fileID: 8501100794743113795}
+  - component: {fileID: 5220344802290424619}
   m_Layer: 0
   m_Name: TriggerZoneExpandingNoLoop
   m_TagString: TriggerZone
@@ -5010,6 +5011,20 @@ MonoBehaviour:
   colorEffect: {fileID: 0}
   triggerParticles: {fileID: 6002601656608331280}
   triggerLight: {fileID: 0}
+--- !u!114 &5220344802290424619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4160104256053195351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dde61432ac04a4eafbfe98365e18ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventID: 
+  dependsOnEventID: 
 --- !u!1 &4467889339678975792
 GameObject:
   m_ObjectHideFlags: 0
@@ -5111,6 +5126,12 @@ MonoBehaviour:
   triggerOnlyOnce: 1
   effectManager: {fileID: 0}
   triggerSound: {fileID: 8300000, guid: 067a8e1530929457ba07cb6c522b45f2, type: 3}
+  eventToTrigger: 
+  eventToTriggerInmediately: 
+  eventObject: {fileID: 0}
+  startsHidden: 1
+  activationEvent: 
+  nextSceneName: 
 --- !u!23 &3967639896224075513
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5345,6 +5366,7 @@ GameObject:
   - component: {fileID: 779739035959692651}
   - component: {fileID: 8751532213663847110}
   - component: {fileID: 6385844932218307340}
+  - component: {fileID: 5434414768567207645}
   m_Layer: 0
   m_Name: TriggerZone
   m_TagString: TriggerZone
@@ -5480,3 +5502,23 @@ MonoBehaviour:
   triggerOnlyOnce: 1
   effectManager: {fileID: 8501100794743113795}
   triggerSound: {fileID: 8300000, guid: 7a4e4dcb8e6c34ed69f0a54de6195047, type: 3}
+  eventToTrigger: 
+  eventToTriggerInmediately: 
+  eventObject: {fileID: 0}
+  startsHidden: 1
+  activationEvent: 
+  nextSceneName: 
+--- !u!114 &5434414768567207645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8649553666238767909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dde61432ac04a4eafbfe98365e18ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventID: 
+  dependsOnEventID: 

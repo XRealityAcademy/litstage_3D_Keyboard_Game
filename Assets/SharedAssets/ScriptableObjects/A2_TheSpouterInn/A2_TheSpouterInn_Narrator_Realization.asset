@@ -18,10 +18,10 @@ MonoBehaviour:
       savage from the South Seas. When he pulled out a small, hunched idol and began
       a strange ritual by the fireplace, my unease only grew. Then, to my horror,
       he climbed into bed with me, tomahawk in his teeth, and I cried out
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 63c8a7f7fa89b4fd6a4cb5634688e4b3, type: 3}
   - text: "The landlord burst in just in time, reassuring me that this strange harpooneer,
       Queequeg, meant no harm. Hesitantly, I agreed to share the bed, realizing he
       was just as human as I was. \"Better sleep with a sober cannibal than a drunken
       Christian,\" I thought, and soon settled down for the best night's sleep I\u2019d
       had. "
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: d67412b4492aa4dfebf9f3d48d1e6e48, type: 3}

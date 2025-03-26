@@ -16,4 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - text: said Ahab, groping his way along the bulwarks to his pivot-hole; but suddenly
       finding his path made plain to him by elbowed lances of fire.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 5453aff6f8a99446a9afe6e2b0febff0, type: 3}

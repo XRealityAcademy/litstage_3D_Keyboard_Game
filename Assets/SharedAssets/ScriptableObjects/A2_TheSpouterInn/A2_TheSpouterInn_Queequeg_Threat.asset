@@ -16,4 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - text: "\"Who-e debel you?\"\u2014he at last said\u2014\"you no speak-e, dam-me,
       I kill-e.\""
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 5f97a085557c3431eade313d40fcd680, type: 3}

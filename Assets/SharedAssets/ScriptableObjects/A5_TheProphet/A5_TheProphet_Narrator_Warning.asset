@@ -16,4 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - text: "referring to Captain Ahab, known for the storms that follow him. When
       we confirmed we hadn\u2019t, he introduced himself as Elijah and warned, "
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 5b4cd25eea0774ab5980c1bf0c4c9b0e, type: 3}

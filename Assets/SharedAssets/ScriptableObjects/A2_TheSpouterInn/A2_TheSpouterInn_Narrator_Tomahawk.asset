@@ -15,4 +15,4 @@ MonoBehaviour:
   dialogueId: narrator_tomahawk
   dialogueLines:
   - text: And so saying the lighted tomahawk began flourishing about me in the dark.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 8db5b4b5a82514b5c8b00c5f5d54684e, type: 3}

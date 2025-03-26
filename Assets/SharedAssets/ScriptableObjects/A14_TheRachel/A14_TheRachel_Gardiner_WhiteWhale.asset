@@ -15,4 +15,4 @@ MonoBehaviour:
   dialogueId: gardiner_have_you_seen_whale
   dialogueLines:
   - text: Have you seen the White Whale?
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 7d53d03aed55f42b5aa62c965c4da359, type: 3}

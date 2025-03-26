@@ -16,7 +16,7 @@ MonoBehaviour:
   dialogueLines:
   - text: 'It was in the midst of this repose that Ahab, who had been sitting motionless
       in his pivot-hole, '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 7c07ffa06c455462cba6ad9c54670334, type: 3}
   - text: 'slowly turned his head, like a rusty weathercock, upon his old pivot,
       and said:'
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: c0f6d3f9472d4413082ac97c640d1488, type: 3}

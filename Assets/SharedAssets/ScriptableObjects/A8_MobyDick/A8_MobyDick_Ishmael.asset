@@ -16,18 +16,18 @@ MonoBehaviour:
   dialogueLines:
   - text: And as for those who, previously hearing of the White Whale, by chance
       caught sight of him;
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: a53bb20ec10844e77aab4565de790a93, type: 3}
   - text: 'in the beginning of the thing they had every one of them, almost, as boldly
       and fearlessly lowered for him, as for any other whale of that species. '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 9d1b9ecc562504e1590d4cac6c028638, type: 3}
   - text: "But at length, such calamities did ensue in these assaults\u2014 not restricted
       to sprained wrists and ankles, broken limbs,"
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: ad3beba3c84fe4508a1b086104f59ab6, type: 3}
   - text: "or devouring amputations\u2014but fatal to the last degree of fatality;"
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: e6afdaf94e7fa40478a5a47b79c58567, type: 3}
   - text: 'those repeated disastrous repulses, all accumulating and piling their
       terrors upon Moby Dick; '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 30e39dbf1b90347c6adf15a6296dbf44, type: 3}
   - text: those things had gone far to shake the fortitude of many brave hunters,
       to whom the story of the White Whale had eventually come.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 903166030e1e7437c99ba0ebca57bc67, type: 3}

@@ -15,6 +15,6 @@ MonoBehaviour:
   dialogueId: narrator_is_it_wise
   dialogueLines:
   - text: Do you think it's wise for us to pursue him?
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: de98046d51df649cd8c52f29d58897fb, type: 3}
   - text: Starbuck's expression hardened.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: bdadfc7bc82854ee19b9ec9e0a7cbe92, type: 3}

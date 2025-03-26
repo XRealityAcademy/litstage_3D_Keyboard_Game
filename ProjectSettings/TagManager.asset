@@ -13,6 +13,7 @@ TagManager:
   - DialogTriggerZone
   - TriggerZone
   - playerDialog
+  - Collectible
   layers:
   - Default
   - TransparentFX

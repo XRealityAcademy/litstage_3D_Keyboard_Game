@@ -15,6 +15,6 @@ MonoBehaviour:
   dialogueId: ishmael_elijah_spot
   dialogueLines:
   - text: Elijah! cried I, after we had walked a few paces.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 6f4aaedf6794d4804bc51b818d8e09cb, type: 3}
   - text: This is the man that, in the counting room, gave me the evil eye this morning.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: abe0e9606e7454331ab27f8e760a055c, type: 3}

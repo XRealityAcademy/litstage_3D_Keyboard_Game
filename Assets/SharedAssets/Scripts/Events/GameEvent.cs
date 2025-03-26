@@ -7,6 +7,12 @@ public class GameEvent : MonoBehaviour
 
     private void Start()
     {
+
+        if (string.IsNullOrEmpty(eventID))
+        {
+            Debug.LogError($"[GameEvent] Missing eventID on '{gameObject.name}'. Please assign a unique Event ID.");
+        }
+
         if (!string.IsNullOrEmpty(dependsOnEventID))
         {
             // ✅ Wait for the dependency event to complete before running

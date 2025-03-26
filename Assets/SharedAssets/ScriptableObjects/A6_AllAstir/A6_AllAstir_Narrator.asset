@@ -19,11 +19,11 @@ MonoBehaviour:
       was absent, leaving the mates\u2014Starbuck, Stubb, and Flask\u2014to manage
       the deck. Starbuck moved with quiet resolve, Stubb with a smile and pipe, while
       Flask held a solid, dependable air. "
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: a1ab1f8c71a0c40ed84070ae6ccc5c5c, type: 3}
   - text: "The crew settled into their routines, forming camaraderie through shared
       work and purpose. As night fell, whispers of Ahab\u2019s obsession circulated,
       his presence looming. Queequeg and I stood at the rail, gazing at the moonlit
       sea, a mix of excitement and unease filling the air. The journey had begun,
       a venture into the unknown, with the Pequod carrying us deeper into fate\u2019s
       mysterious depths."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 660c4d2f554c74ccf9d99066e431344c, type: 3}

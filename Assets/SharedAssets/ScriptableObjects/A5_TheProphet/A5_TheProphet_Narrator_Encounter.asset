@@ -17,4 +17,4 @@ MonoBehaviour:
   - text: 'As we awaited departure, a gaunt man approached us on the dock, his piercing
       gaze unsettling. "Going aboard the Pequod?" he asked with a cryptic tone. "Indeed,"
       I replied. He leaned closer. '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 60636415fb8ec43f786518ef6ec359cf, type: 3}

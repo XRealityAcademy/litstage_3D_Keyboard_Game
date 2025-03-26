@@ -5063,6 +5063,12 @@ MonoBehaviour:
   triggerOnlyOnce: 1
   effectManager: {fileID: 0}
   triggerSound: {fileID: 8300000, guid: 067a8e1530929457ba07cb6c522b45f2, type: 3}
+  eventToTrigger: 
+  eventToTriggerInmediately: 
+  eventObject: {fileID: 0}
+  startsHidden: 1
+  activationEvent: 
+  nextSceneName: 
 --- !u!23 &5481885872575188768
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5299,6 +5305,7 @@ GameObject:
   - component: {fileID: 5501776590265011685}
   - component: {fileID: 1867414858518207230}
   - component: {fileID: 7485359038154284574}
+  - component: {fileID: 8366216224199575057}
   m_Layer: 0
   m_Name: TriggerZone
   m_TagString: TriggerZone
@@ -5434,6 +5441,26 @@ MonoBehaviour:
   triggerOnlyOnce: 1
   effectManager: {fileID: 7517044932874798505}
   triggerSound: {fileID: 8300000, guid: 44e2e1ed3895c4a2ca33bece12979fb5, type: 3}
+  eventToTrigger: 
+  eventToTriggerInmediately: 
+  eventObject: {fileID: 0}
+  startsHidden: 1
+  activationEvent: 
+  nextSceneName: 
+--- !u!114 &8366216224199575057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5845388341000824982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4dde61432ac04a4eafbfe98365e18ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventID: 
+  dependsOnEventID: 
 --- !u!1 &8282395931971670798
 GameObject:
   m_ObjectHideFlags: 0

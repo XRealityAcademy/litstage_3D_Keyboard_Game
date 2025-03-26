@@ -55,7 +55,7 @@ public class DialogContainer : MonoBehaviour
         }
 
         dialogUI.SetActive(isVisible);
-        Debug.Log($"🔄 Dialog ({eventToListen}) is now " + (isVisible ? "VISIBLE ✅" : "HIDDEN ❌"));
+//        Debug.Log($"🔄 Dialog ({eventToListen}) is now " + (isVisible ? "VISIBLE ✅" : "HIDDEN ❌"));
     }
 
     public bool IsVisible()

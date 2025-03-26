@@ -16,4 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - text: God is against thee, old man; forbear! This is an ill voyage. Let us turn
       back while we can.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 76511a98a1cde40e9a46d4969be5270f, type: 3}

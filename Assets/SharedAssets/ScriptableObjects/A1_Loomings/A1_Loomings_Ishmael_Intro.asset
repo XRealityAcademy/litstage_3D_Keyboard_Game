@@ -15,9 +15,9 @@ MonoBehaviour:
   dialogueId: intro
   dialogueLines:
   - text: "Call me Ishmael. Some years ago\u2014never mind how long precisely"
-    voiceClip: {fileID: 8300000, guid: fd08dcaa325f447c088f2988ffdf6fff, type: 3}
+    voiceClip: {fileID: 8300000, guid: 52565b4441dcc47d29de3209594d09d5, type: 3}
   - text: having little or no money in my purse, and nothing particular to interest
       me on shore,
-    voiceClip: {fileID: 8300000, guid: 4f75d2e0742444468bc257d7e7b6ed3e, type: 3}
+    voiceClip: {fileID: 8300000, guid: 44ec8eba2b6234356b86206af3cded53, type: 3}
   - text: I thought I would sail about a little and see the watery part of the world.
-    voiceClip: {fileID: 8300000, guid: e03a3ce9b21834d08bd7b2dcc2081f6e, type: 3}
+    voiceClip: {fileID: 8300000, guid: 4e37bd60dc17c4837af0774f2051c47b, type: 3}

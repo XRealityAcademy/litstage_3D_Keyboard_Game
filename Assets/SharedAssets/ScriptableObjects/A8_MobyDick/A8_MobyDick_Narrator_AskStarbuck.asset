@@ -15,4 +15,4 @@ MonoBehaviour:
   dialogueId: narrator_starbuck_prompt
   dialogueLines:
   - text: What would you know?
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: d21bdea1faf314dc8b95c147b5acbaef, type: 3}

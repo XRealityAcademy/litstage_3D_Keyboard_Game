@@ -19,8 +19,8 @@ MonoBehaviour:
       as Right Whales, unfazed by the Pequod, swam calmly through the brit, their
       jaws acting like filters. Observing these giants, they resembled rocks or islands
       until they moved. '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 511ccd3a7fdd045eaa4434a5fe2bba40, type: 3}
   - text: "Their presence was both awe-inspiring and unsettling, embodying the sea's
       untamed nature\u2014a relentless, self-consuming force that holds beauty, treachery,
       and a strange parallel to human souls caught between serenity and unknown terrors."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: d0d677dc6b2ec4edfa231d9e6d14ad45, type: 3}

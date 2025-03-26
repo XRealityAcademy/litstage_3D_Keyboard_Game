@@ -21,7 +21,7 @@ MonoBehaviour:
       fastest\u2014into pursuit. Soon after, the boat vanished, lost in the turbulent
       chase. Now, Gardiner begged Ahab to help search for his son, a young boy aboard
       the missing whaleboat."
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: fb8a156b146be417db0f4c49ac598249, type: 3}
   - text: "Moved by Gardiner's desperation but shackled by his own obsession, Ahab
       coldly refused. Gardiner pleaded, reminding Ahab that he too had a child back
       home, hoping to spark a hint of empathy. Yet Ahab remained unmoved, insisting

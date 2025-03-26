@@ -16,4 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - text: Wisdom may not factor into it. Captain Ahab's desire for vengeance overshadows
       all else.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 6a6518cd479e642cc9b8fc83bcf2ff4f, type: 3}

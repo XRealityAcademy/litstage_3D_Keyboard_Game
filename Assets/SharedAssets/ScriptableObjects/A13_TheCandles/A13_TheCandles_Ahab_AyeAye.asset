@@ -15,4 +15,4 @@ MonoBehaviour:
   dialogueId: ahab_aye_aye
   dialogueLines:
   - text: Aye, aye, men!
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 4ada19997318f45f19edf472b7d766d0, type: 3}

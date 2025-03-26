@@ -15,10 +15,10 @@ MonoBehaviour:
   dialogueId: ishmael_reflection
   dialogueLines:
   - text: Yes, Ishmael, the same fate may be thine. But somehow I grew merry again.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 5f12a086726f1406c8695dc398260da9, type: 3}
   - text: Delightful inducements to embark, fine chances for promotion,
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: b522aee014f84403aab85ac0d2163d5a, type: 3}
   - text: 'it may be, one of these days, who knows? '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 9db4e5028b0f843f08a2071b2efaca52, type: 3}
   - text: If I shall again try a fall with the Inscrutable Tide.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: ffcf9fb7e395846b790599f83bc76d12, type: 3}

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueId: theprophet_ahab_question
   dialogueLines:
-  - text: '"Have you met Old Thunder yet?"'
-    voiceClip: {fileID: 0}
+  - text: Have you met Old Thunder yet?
+    voiceClip: {fileID: 8300000, guid: 244f9e2c7643b4dca9270d609ad6266d, type: 3}

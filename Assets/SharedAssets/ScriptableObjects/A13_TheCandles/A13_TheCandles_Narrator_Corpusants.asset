@@ -16,4 +16,4 @@ MonoBehaviour:
   dialogueLines:
   - text: 'Amid a typhoon, Ahab confronts the blazing "corpusants" (St. Elmo''s fire)
       on the masts, symbolizing his defiance. '
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 97c123395a4e24414922a2de1b56dba3, type: 3}

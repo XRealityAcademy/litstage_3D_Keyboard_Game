@@ -15,6 +15,6 @@ MonoBehaviour:
   dialogueId: narrator_is_he_fearsome
   dialogueLines:
   - text: Is he truly as fearsome as they say? A whale beyond all others?
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 4242633d54bf2491e90e0dc8ec4a3960, type: 3}
   - text: Starbuck sighed.
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: e3380f0183a5f4c159d4076bc77c96d5, type: 3}
