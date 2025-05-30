@@ -2,15 +2,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class InventoryManager : MonoBehaviour
+public class InventoryManager3D : MonoBehaviour
 {
-    public static InventoryManager instance;
+    public static InventoryManager3D instance;
 
     // Use TextMeshProUGUI since you’re using TMP
     public TextMeshProUGUI inventoryText;
 
     // List to hold our collected inventory items
-    private List<InventoryItem> collectedItems = new List<InventoryItem>();
+    private List<InventoryItem3D> collectedItems = new List<InventoryItem3D>();
 
     private void Awake()
     {
@@ -29,7 +29,7 @@ public class InventoryManager : MonoBehaviour
     public void AddItem(string itemName, GameObject designPrefab)
     {
         // Create and store your inventory item with an optional design.
-        InventoryItem newItem = new InventoryItem(itemName, designPrefab);
+        InventoryItem3D newItem = new InventoryItem3D(itemName, designPrefab);
         collectedItems.Add(newItem);
         UpdateInventoryUI();
     }

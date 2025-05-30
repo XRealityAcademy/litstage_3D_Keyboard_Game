@@ -56,7 +56,7 @@ public class CollectibleItem : MonoBehaviour
     public void Collect()
     {
         Debug.Log("Item collected: " + itemName);
-        InventoryManager.instance.AddItem(itemName, blenderDesignPrefab);
+        InventoryManager3D.instance.AddItem(itemName, blenderDesignPrefab);
         Destroy(gameObject);
     }
 
